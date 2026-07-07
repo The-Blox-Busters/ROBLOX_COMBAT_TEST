@@ -4,31 +4,33 @@
     "$className": "DataModel",
 
     "ReplicatedStorage": {
-      "replicatedStorage":{
-        "$path": "src/replicatedStorage",
-        "$className": "Folder"
-      }
+      "ViewFrame":{
+        "$path": "src/2_pistolAssets/1_pistolModels/viewframe.rbxm"
+      },
+      "ShootingEvent":{
+        "$path": "src/2_pistolAssets/3_pistolRemotes/ShootingEvent.rbxm"
+      } 
     },
 
     "ServerScriptService": {
-      "serverScriptService": {
-        "$path": "src/serverScriptService",
-        "$className": "Folder"
+      "RayCasting":{
+        "$path":"src/1_pistolScripts/1_serverScripts/RayCasting.server.lua"
       }
     },
 
     "StarterPack":{
-      "starterPack": {
-        "$path": "src/starterPack",
-        "$className": "Folder"
-      }
+      "GunToolFirstPerson":{
+        "$path": "src/2_pistolAssets/2_pistolTools/GunToolFirstPerson.rbxm",
+        "pistolScript":{
+          "$path": "src/1_pistolScripts/2_localScripts/pistolScript.client.lua"
+        }
+      } 
     },
 
     "StarterPlayer": {
       "StarterPlayerScripts": {
-        "starterPlayerScripts": {
-          "$path": "src/starterPlayerScripts",
-          "$className": "Folder"
+        "LocalScript": {
+          "$path": "src/1_pistolScripts/2_localScripts/LocalScript.client.lua"
         }
       }
     },
