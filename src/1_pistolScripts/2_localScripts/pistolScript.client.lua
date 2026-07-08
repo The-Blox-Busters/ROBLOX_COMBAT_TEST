@@ -12,24 +12,31 @@ local shooting
 local pickPistol
 local idle
 local steady
-
 local animator 
-
 local animationPickPistol
 local animationShooting
 local animationIdle
 local animationSteady
 
-local boolean = 0
-isEquipped = false
+local isEquipped = false
 
 local debouncer = true	
 local swayCF = CFrame.new()
 local bob = CFrame.new()
+local recoilCF = CFrame.new()
+local recoilTarget = CFrame.new()
+local recoil = 0
+
+
+local function recoilCompounder()
+	recoilTarget = Camera.CFrame * CFrame.Angles(math.rad(recoil), math.rad(recoil * .4), 0)
+	recoilCF = Camera.CFrame:Lerp(recoilTarget, 0.1)
+	Camera.CFrame = recoilCF
+	recoil = math.clamp(recoil+1,0,5)
+end
 
 GunTool.Equipped:Connect(function()
 	isEquipped = true
-	boolean = 1
 	local ViewFrameClone = ViewFrame:Clone()
 	ViewFrameClone.Parent = Camera
 	shooting = ViewFrameClone.Shooting
@@ -56,33 +63,26 @@ GunTool.Unequipped:Connect(function()
 end)
 
 GunTool.Activated:Connect(function()
-	boolean = 0
 	local mousePosition = mouse.Hit.Position
-
+	recoilCompounder()
+	mousePosition = mousePosition
 	if debouncer == false then
 		return
 	end
 	debouncer = false
-	
 	local flash = Camera.ViewFrame.Gun.Origin.FlashEmitter
-
 	if flash then
 		flash:Emit(1)
 	end
-	
 	animationIdle:Stop()
 	animationPickPistol:Stop()
-	
 	animationShooting:Play()
 	animationShooting:AdjustSpeed(4)
-	
 	animationShooting.Stopped:Connect(function()
 		animationIdle:Play()
 		animationIdle:AdjustSpeed(0.5)
 	end)
-
-	shootingEvent:FireServer(Camera.ViewFrame.Gun.Origin.WorldPosition,mousePosition)	
-	
+	shootingEvent:FireServer(Camera.ViewFrame.Gun.Origin.WorldPosition,mousePosition)
 	task.delay(0.25, function()
 		debouncer = true
 	end)
@@ -94,12 +94,9 @@ RunService.RenderStepped:Connect(function(deltaTime)
 	local targetBob = CFrame.new()
 	
 	if isEquipped == true then
-		
 		local movement = player.Character.Humanoid.MoveDirection.Magnitude > 0
-
 		if movement ~= lastMoving then
 			lastMoving = movement
-
 			if movement then
 				animationIdle:Stop()
 				animationSteady:Play()
@@ -113,7 +110,6 @@ RunService.RenderStepped:Connect(function(deltaTime)
 		if movement then
 			local bobX = math.sin(time() * 8) * 0.1
 			local bobY = math.abs(math.cos(time() * 25)) * 0.05
-
 			targetBob = CFrame.new(bobX, bobY, 0)
 		end
 		
@@ -123,11 +119,16 @@ RunService.RenderStepped:Connect(function(deltaTime)
 			end
 		end
 		if Camera:FindFirstChild('ViewFrame') ~= nil then
+			
+			recoil = math.clamp(recoil- deltaTime * 2,0,5)
+			print("recoil: " .. recoil)
+					
 			local mouseDelta = UserInputService:GetMouseDelta()
 			local swayX = math.clamp(mouseDelta.X, -.2,.2)
 			local swayY = math.clamp(mouseDelta.Y, -.2,.2) 
 			swayCF = swayCF:Lerp(CFrame.new(swayX, swayY, 0), .1)
 			bob = bob:Lerp(targetBob, deltaTime * 5)
+
 			Camera.ViewFrame:SetPrimaryPartCFrame(Camera.CFrame * swayCF * bob)	
 		end
 	else
