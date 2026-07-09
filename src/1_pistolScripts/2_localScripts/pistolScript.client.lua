@@ -23,16 +23,14 @@ local isEquipped = false
 local debouncer = true	
 local swayCF = CFrame.new()
 local bob = CFrame.new()
-local recoilCF = CFrame.new()
 local recoilTarget = CFrame.new()
+local recoilCameraCF = CFrame.new()
+local recoilViewModel = CFrame.new()
 local recoil = 0
 
 
 local function recoilCompounder()
-	recoilTarget = Camera.CFrame * CFrame.Angles(math.rad(recoil), math.rad(recoil * .4), 0)
-	recoilCF = Camera.CFrame:Lerp(recoilTarget, 0.1)
-	Camera.CFrame = recoilCF
-	recoil = math.clamp(recoil+1,0,5)
+	recoil = math.clamp(recoil+.5,0,3)
 end
 
 GunTool.Equipped:Connect(function()
@@ -119,21 +117,32 @@ RunService.RenderStepped:Connect(function(deltaTime)
 			end
 		end
 		if Camera:FindFirstChild('ViewFrame') ~= nil then
-			
-			recoil = math.clamp(recoil- deltaTime * 2,0,5)
-			print("recoil: " .. recoil)
-					
 			local mouseDelta = UserInputService:GetMouseDelta()
 			local swayX = math.clamp(mouseDelta.X, -.2,.2)
 			local swayY = math.clamp(mouseDelta.Y, -.2,.2) 
 			swayCF = swayCF:Lerp(CFrame.new(swayX, swayY, 0), .1)
 			bob = bob:Lerp(targetBob, deltaTime * 5)
-
-			Camera.ViewFrame:SetPrimaryPartCFrame(Camera.CFrame * swayCF * bob)	
+			
+			recoilViewModel = recoilViewModel:Lerp(CFrame.new(0,math.rad(recoil*100),0), deltaTime) 
+			Camera.ViewFrame:SetPrimaryPartCFrame(Camera.CFrame * swayCF * bob * recoilViewModel)	
 		end
 	else
 		if Camera:FindFirstChild('ViewFrame') ~= nil then
 			Camera:FindFirstChild('ViewFrame'):Destroy()		
 		end
 	end
+end)
+
+RunService:BindToRenderStep("Recoil", Enum.RenderPriority.Camera.Value + 1, function(deltaTime	)
+	local baseCamera = Camera.CFrame
+	recoil = math.clamp(recoil- deltaTime * 8,0,5)
+	print("recoil: " .. recoil)
+	recoilTarget = CFrame.Angles(
+	math.rad(recoil * .4),
+	math.rad(math.random(-math.floor(recoil * 2), math.floor(recoil * 2))),
+	0
+)
+	recoilCameraCF = recoilCameraCF:Lerp(recoilTarget, deltaTime * 70)
+	print("deltaTime: " .. deltaTime)
+	Camera.CFrame = baseCamera * recoilCameraCF
 end)
