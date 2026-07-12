@@ -30,8 +30,8 @@ local generalRecoil = 0
 local recoilCameraTarget = CFrame.new()
 local recoilCameraCF = CFrame.new()
 
-local maxRecoil = 3
-local recoilInstensity = 0.5
+local maxRecoil = 2
+local recoilInstensity = 0.3
 local recoilRecovery = 5
 
 local recoilViewModel = CFrame.new()
