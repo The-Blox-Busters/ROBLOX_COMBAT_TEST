@@ -41,8 +41,6 @@ local viewmodelRecoilPitch = 55
 local viewmodelRecoilYaw = 5
 local viewmodelRecoilRoll = 34
 
-
-
 GunTool.Equipped:Connect(function()
 	isEquipped = true
 	local ViewFrameClone = ViewFrame:Clone()
@@ -90,7 +88,7 @@ GunTool.Activated:Connect(function()
 		animationIdle:AdjustSpeed(0.5)
 	end)
 	shootingEvent:FireServer(Camera.ViewFrame.Gun.Origin.WorldPosition,mousePosition)
-	task.delay(0, function()
+	task.delay(fireRate, function()
 		debouncer = true
 	end)
 end)
