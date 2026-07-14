@@ -1,6 +1,6 @@
 # ROBLOX_COMBAT_TEST
 
-## Azul installation
+## Azul Installation
 
 1. Install Node.js from [nodejs.org](https://nodejs.org/).
 2. install Azul globally:
@@ -25,3 +25,7 @@
 - [StyLua](https://marketplace.visualstudio.com/items?itemName=JohnnyMorganz.stylua)
 - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
 - [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
+
+## Structure Explanation
+
+todo

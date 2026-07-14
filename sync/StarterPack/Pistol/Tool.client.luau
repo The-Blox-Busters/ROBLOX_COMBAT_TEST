@@ -1,12 +1,14 @@
+-- TODO: use the new weapon module
+
 local player = game.Players.LocalPlayer
 player.CameraMode = Enum.CameraMode.LockFirstPerson
-local ViewFrame = game.ReplicatedStorage.ViewFrame
+local ViewFrame = game.ReplicatedStorage.Assests.ViewModels.Pistol
 local GunTool = script.Parent
 local Camera = workspace.Camera
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
 
-local shootingEvent = game.ReplicatedStorage.ShootingEvent
+local shootingEvent = game.ReplicatedStorage.Remotes.Shoot
 local mouse = player:GetMouse()
 local shooting
 local pickPistol
@@ -44,6 +46,7 @@ local viewmodelRecoilRoll = 34
 GunTool.Equipped:Connect(function()
 	isEquipped = true
 	local ViewFrameClone = ViewFrame:Clone()
+	ViewFrameClone.Name = "ViewFrame"
 	ViewFrameClone.Parent = Camera
 	shooting = ViewFrameClone.Shooting
 	pickPistol = ViewFrameClone.PickingPistol

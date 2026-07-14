@@ -2,8 +2,7 @@ local bulletFolder = Instance.new("Folder")
 bulletFolder.Name = "Bullets"
 bulletFolder.Parent = workspace
 
-local function seeRay(origin, direction)
-	
+local function seeRay(origin, direction)	
 	local part = Instance.new("Part")
 	part.Parent = workspace
 	part.Anchored = true
@@ -46,7 +45,7 @@ exception.FilterType = Enum.RaycastFilterType.Exclude
 
 local playerTable = {}
 
-local shootingEvent = game.ReplicatedStorage.ShootingEvent
+local shootingEvent = game.ReplicatedStorage.Remotes.Shoot
 shootingEvent.OnServerEvent:Connect(function(plr,origin,mousePosition)
 	local fireRate = 0.2
 	local times = os.clock()
