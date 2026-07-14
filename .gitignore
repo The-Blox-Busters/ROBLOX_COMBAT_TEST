@@ -1,5 +1,7 @@
 # Project place file
 /ROBLOX_COMBAT_TEST.rbxlx
+*.rbxl
+.xdp-ROBLOX_COMBAT_TEST.rbxlx.lock-Ay2RO1
 
 # Roblox Studio lock files
 /*.rbxlx.lock
