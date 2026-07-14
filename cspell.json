@@ -1,0 +1,14 @@
+{
+    "version": "0.2",
+    "ignorePaths": [
+        ".gitignore",
+        "sourcemap.json"
+    ],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "Azul"
+    ],
+    "ignoreWords": [],
+    "import": []
+}

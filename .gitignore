@@ -1,10 +1,13 @@
-# Project place file
-/ROBLOX_COMBAT_TEST.rbxlx
+# Ignore Roblox generated file formats
+*.rbxlx
 *.rbxl
+
+# Local XStudio package files
 .xdp-*
 
-# Roblox Studio lock files
+# Ignore lock files at repository root
 /*.rbxlx.lock
 /*.rbxl.lock
 
+# Ignore generated sourcemaps
 sourcemap.json
