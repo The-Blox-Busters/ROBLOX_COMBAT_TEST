@@ -1,4 +1,4 @@
-local player = game.Players.LocalPlayer
+ local player = game.Players.LocalPlayer
 player.CameraMode = Enum.CameraMode.LockFirstPerson
 local ViewFrame = game.ReplicatedStorage.ViewFrame
 local GunTool = script.Parent
@@ -88,7 +88,7 @@ GunTool.Activated:Connect(function()
 		animationIdle:AdjustSpeed(0.5)
 	end)
 	shootingEvent:FireServer(Camera.ViewFrame.Gun.Origin.WorldPosition,mousePosition)
-	task.delay(0, function()
+	task.delay(fireRate, function()
 		debouncer = true
 	end)
 end)
@@ -165,3 +165,4 @@ RunService.RenderStepped:Connect(function(deltaTime)
 		end
 	end
 end)
+
