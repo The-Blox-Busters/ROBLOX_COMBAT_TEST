@@ -166,9 +166,40 @@
           "guid": "144334",
           "children": [
             {
+              "name": "Inventory",
+              "className": "Folder",
+              "guid": "697240",
+              "children": [
+                {
+                  "name": "Inventory",
+                  "className": "ModuleScript",
+                  "guid": "697243",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Inventory/Inventory.luau"
+                  ]
+                },
+                {
+                  "name": "Item",
+                  "className": "ModuleScript",
+                  "guid": "697245",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Inventory/Item.luau"
+                  ]
+                },
+                {
+                  "name": "ItemDatabase",
+                  "className": "ModuleScript",
+                  "guid": "697247",
+                  "filePaths": [
+                    "sync/ReplicatedStorage/Modules/Inventory/ItemDatabase.luau"
+                  ]
+                }
+              ]
+            },
+            {
               "name": "Weapon",
               "className": "ModuleScript",
-              "guid": "144346",
+              "guid": "697241",
               "filePaths": [
                 "sync/ReplicatedStorage/Modules/Weapon.luau"
               ]
@@ -180,6 +211,16 @@
           "className": "Folder",
           "guid": "144335",
           "children": [
+            {
+              "name": "InventoryAdd",
+              "className": "RemoteEvent",
+              "guid": "697281"
+            },
+            {
+              "name": "InventoryRemove",
+              "className": "RemoteEvent",
+              "guid": "697351"
+            },
             {
               "name": "Shoot",
               "className": "RemoteEvent",
@@ -195,9 +236,17 @@
       "guid": "144122",
       "children": [
         {
+          "name": "InventoryServices",
+          "className": "Script",
+          "guid": "697233",
+          "filePaths": [
+            "sync/ServerScriptService/InventoryServices.server.luau"
+          ]
+        },
+        {
           "name": "WeaponService",
           "className": "Script",
-          "guid": "144359",
+          "guid": "697231",
           "filePaths": [
             "sync/ServerScriptService/WeaponService.server.luau"
           ]
@@ -237,7 +286,7 @@
             {
               "name": "Tool",
               "className": "LocalScript",
-              "guid": "144342",
+              "guid": "697236",
               "filePaths": [
                 "sync/StarterPack/Pistol/Tool.client.luau"
               ]
@@ -264,7 +313,7 @@
             {
               "name": "Main",
               "className": "LocalScript",
-              "guid": "144341",
+              "guid": "697238",
               "filePaths": [
                 "sync/StarterPlayer/StarterPlayerScripts/Main.client.luau"
               ]

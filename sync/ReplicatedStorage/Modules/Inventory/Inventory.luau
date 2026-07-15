@@ -13,6 +13,29 @@ type InventoryData = {
 
 export type Inventory = typeof(setmetatable({} :: InventoryData, Inventory))
 
+function Inventory.__tostring(self: Inventory): string
+	local rowsStr: { string } = {}
+	local colMaxWidth: { number } = {}
+
+	for _, row in ipairs(self.Grid) do
+		for i, cell in ipairs(row) do
+			local text = cell == "" and "." or cell
+			colMaxWidth[i] = math.max(colMaxWidth[i] or 0, #text)
+		end
+	end
+
+	for _, row in ipairs(self.Grid) do
+		local cells: { string } = {}
+		for i, cell in ipairs(row) do
+			local text = cell == "" and "." or cell
+			table.insert(cells, cell .. string.rep(" ", colMaxWidth[i] - #text))
+		end
+		table.insert(rowsStr, table.concat(cells, " "))
+	end
+
+	return table.concat(rowsStr, "\n")
+end
+
 function Inventory.new(Width: number, Height: number): Inventory
 	local Grid: { { string } } = {}
 	for y = 1, Height do

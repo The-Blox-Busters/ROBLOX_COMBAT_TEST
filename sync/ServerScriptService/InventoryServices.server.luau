@@ -10,7 +10,7 @@ local Inventory = require(Modules.Inventory.Inventory)
 local InventoryAddEvent = Remotes.InventoryAdd
 local InventoryRemoveEvent = Remotes.InventoryRemove
 
-local inventories: { [Player]: Inventory.Inventory? } = {}
+local inventories: { [Player]: Inventory.Inventory } = {}
 
 Players.PlayerAdded:Connect(function(player)
 	inventories[player] = Inventory.new(10, 8) -- ! TODO
@@ -46,6 +46,7 @@ InventoryRemoveEvent.OnServerEvent:Connect(function(player, x: number, y: number
 
 	if inventory:RemoveAt(x, y) then
 		print("Item removed from inventory at position:", x, y)
+		print(inventory)
 	else
 		print("Failed to remove item from inventory at position:", x, y)
 	end
