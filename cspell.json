@@ -9,6 +9,10 @@
     "words": [
         "Azul"
     ],
-    "ignoreWords": [],
+    "ignoreWords": [
+        "ipairs",
+        "setmetatable",
+        "tostring"
+    ],
     "import": []
 }
