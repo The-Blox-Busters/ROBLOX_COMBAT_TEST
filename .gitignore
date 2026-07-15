@@ -8,6 +8,3 @@
 # Ignore lock files at repository root
 /*.rbxlx.lock
 /*.rbxl.lock
-
-# Ignore generated sourcemaps
-sourcemap.json
