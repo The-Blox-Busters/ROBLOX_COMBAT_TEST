@@ -5,14 +5,12 @@ function ViewmodelService:Init()
     self.currentViewmodel = nil
     self.clonedModel = nil
     self.isEquipped = nil
-    self.swayCF = nil
+    self.swayCF = CFrame.new()
+    print("ViewmodelService initialized")
 end
 
 function ViewmodelService:Equip(config)
     self.isEquipped = true
-    if self.currentViewmodel  then
-        self.currentViewmodel:Destroy()
-    end
     if self.clonedModel then
         self.clonedModel:Destroy()
     end
@@ -24,13 +22,10 @@ function ViewmodelService:Equip(config)
 end
 
 function ViewmodelService:Unequip()
-    if self.currentViewmodel  then
-        self.currentViewmodel:Destroy()
-    end
+    self.isEquipped = false
     if self.clonedModel then
         self.clonedModel:Destroy()
     end
-    self.isEquipped = false
 end
 
 function ViewmodelService:Sway()
@@ -41,9 +36,9 @@ function ViewmodelService:Sway()
 end
 
 function ViewmodelService:Effects()
-    ViewmodelService:Sway()
-
-    self.camera.ViewFrame:SetPrimaryPartCFrame(self.camera.CFrame * self.swayCF)
+    --ViewmodelService:Sway()
+    self.clonedModel:SetPrimaryPartCFrame(self.camera.CFrame * self.swayCF)
+    
 end
 
 

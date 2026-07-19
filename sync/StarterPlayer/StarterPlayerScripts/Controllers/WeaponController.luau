@@ -2,19 +2,20 @@ local WeaponController = {}
 
 function WeaponController:Init()
     self.currentTool = nil
-
+    self.currentConfig = nil
     self.ViewmodelService = require(game.StarterPlayer.StarterPlayerScripts.Systems.ViewmodelService)
     self.ViewmodelService:Init()
     print("WeaponController initialized")
 end
 
-
 function WeaponController:AssignTools()
-    if self.CurrentTool and self.CurrentConfig then
-        self.CurrentTool.Equipped:Connect(function()
-            self.ViewmodelService:Equip(self.CurrentConfig)
+    print("Assigning tools")
+    if self.currentTool and self.currentConfig then
+        print("Current tool exists")
+        self.currentTool.Equipped:Connect(function()
+            self.ViewmodelService:Equip(self.currentConfig)
         end)
-        self.CurrentTool.Unequipped:Connect(function()
+        self.currentTool.Unequipped:Connect(function()
             self.ViewmodelService:Unequip()
         end)
     end
@@ -30,10 +31,10 @@ function WeaponController:CheckForWeapons()
         for _, tool in pairs(backpack:GetChildren()) do
             if tool:IsA("Tool") then
                 print("Found tool: " .. tool.Name)
-                tool.Equipped:Connect(function()
-                    self.currentTool = tool
-                    self.CurrentConfig = require(game.ReplicatedStorage.Shared.WeaponConfigs[self.currentTool.Name])
-                end)
+                self.currentTool = tool
+                self.currentConfig = require(game.ReplicatedStorage.Shared.WeaponConfigs[self.currentTool.Name])
+                WeaponController:AssignTools()
+                
             end
         end
         return
@@ -53,9 +54,7 @@ function WeaponController:Update()
     local runService = game:GetService("RunService")
 
     runService.RenderStepped:Connect(function(DeltaTime)
-        print("RenderStepped")
         if self.ViewmodelService.isEquipped then
-            print("ViewmodelService is equipped")
             self.ViewmodelService:Effects()
         end
     end)
