@@ -1,0 +1,11 @@
+local WeaponController = require(game.StarterPlayer.StarterPlayerScripts.Controllers.WeaponController)
+print(WeaponController)
+
+WeaponController:Init()
+print("WeaponController initialized")
+WeaponController:CheckForWeapons()
+print("WeaponController checked for weapons")
+WeaponController:AssignTools()
+print("WeaponController assigned tools")
+WeaponController:Update()
+print("WeaponController updated")
