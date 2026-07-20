@@ -6,6 +6,7 @@ type BaseItem = {
 	Width: number,
 	Height: number,
 	MaxStack: number,
+	Color: Color3,
 }
 
 type EmptyItem = BaseItem & {
@@ -18,12 +19,8 @@ export type WeaponItem = BaseItem & {
 	--Damage: number, -- ? Use this for weapon system
 	--FireRate: number,
 }
-export type MidKetItem = BaseItem & {
-	Category: "MidKet",
-	Recovery: number,
-}
 
-export type ItemProperties = EmptyItem | WeaponItem | MidKetItem
+export type ItemProperties = BaseItem | EmptyItem | WeaponItem
 
 local ItemDatabase: { [string]: ItemProperties } = {
 	empty = {
@@ -32,6 +29,7 @@ local ItemDatabase: { [string]: ItemProperties } = {
 		Width = 1,
 		Height = 1,
 		MaxStack = 1,
+		Color = Color3.fromHex("#0222ff"),
 	} :: EmptyItem,
 	pistol = {
 		Category = "Weapon",
@@ -39,7 +37,24 @@ local ItemDatabase: { [string]: ItemProperties } = {
 		Width = 2,
 		Height = 1,
 		MaxStack = 1,
+		Color = Color3.fromHex("ab0cdf"),
 	} :: WeaponItem,
+	ammo = {
+		Category = "Ammo",
+		Name = "Ammo",
+		Width = 1,
+		Height = 1,
+		MaxStack = 50,
+		Color = Color3.fromHex("#fbff02"),
+	},
+	medkit = {
+		Category = "MedKit",
+		Name = "MedKit",
+		Width = 1,
+		Height = 1,
+		MaxStack = 10,
+		Color = Color3.fromHex("#ff0000"),
+	},
 }
 
 return ItemDatabase

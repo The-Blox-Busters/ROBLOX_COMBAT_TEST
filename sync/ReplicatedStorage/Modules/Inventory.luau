@@ -47,7 +47,7 @@ function Inventory.__tostring(self: Inventory): string
 		table.insert(rowsStr, table.concat(cells, " "))
 	end
 
-	return table.concat(rowsStr, "\n")
+	return "\n" .. table.concat(rowsStr, "\n")
 end
 
 function Inventory.AddAt(self: Inventory, ItemUid: string, X: number, Y: number): Item.Item?
