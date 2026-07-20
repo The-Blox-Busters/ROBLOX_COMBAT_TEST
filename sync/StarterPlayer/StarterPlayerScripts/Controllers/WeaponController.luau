@@ -3,21 +3,29 @@ local WeaponController = {}
 function WeaponController:Init()
     self.currentTool = nil
     self.currentConfig = nil
+
     self.ViewmodelService = require(game.StarterPlayer.StarterPlayerScripts.Systems.ViewmodelService)
     self.ViewmodelService:Init()
-    print("WeaponController initialized")
+    self.AnimationService = require(game.StarterPlayer.StarterPlayerScripts.Systems.AnimationService)
+    self.AnimationService:Init()
+
 end
 
 function WeaponController:AssignTools()
-    print("Assigning tools")
     if self.currentTool and self.currentConfig then
-        print("Current tool exists")
+
         self.currentTool.Equipped:Connect(function()
             self.ViewmodelService:Equip(self.currentConfig)
+            self.AnimationService:LoadAnimations(self.currentConfig)
+
+            self.AnimationService:PickingWeaponPlay()
+            self.AnimationService:SteadyPlay()
         end)
+
         self.currentTool.Unequipped:Connect(function()
             self.ViewmodelService:Unequip()
         end)
+
     end
 end
 
@@ -34,7 +42,6 @@ function WeaponController:CheckForWeapons()
                 self.currentTool = tool
                 self.currentConfig = require(game.ReplicatedStorage.Shared.WeaponConfigs[self.currentTool.Name])
                 WeaponController:AssignTools()
-                
             end
         end
         return
@@ -53,9 +60,9 @@ end
 function WeaponController:Update()
     local runService = game:GetService("RunService")
 
-    runService.RenderStepped:Connect(function(DeltaTime)
+    runService.RenderStepped:Connect(function(deltaTime)
         if self.ViewmodelService.isEquipped then
-            self.ViewmodelService:Effects()
+            self.ViewmodelService:Effects(deltaTime)
         end
     end)
 end

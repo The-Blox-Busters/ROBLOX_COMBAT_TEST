@@ -6,7 +6,7 @@ function ViewmodelService:Init()
     self.clonedModel = nil
     self.isEquipped = nil
     self.swayCF = CFrame.new()
-    print("ViewmodelService initialized")
+    self.bob = CFrame.new()
 end
 
 function ViewmodelService:Equip(config)
@@ -18,7 +18,6 @@ function ViewmodelService:Equip(config)
     self.currentViewmodel = game:GetService("ReplicatedStorage").Assets.Viewmodels[config.viewmodel]
     self.clonedModel = self.currentViewmodel:Clone()
     self.clonedModel.Parent = self.camera
-
 end
 
 function ViewmodelService:Unequip()
@@ -35,10 +34,21 @@ function ViewmodelService:Sway()
     self.swayCF = self.swayCF:Lerp(CFrame.new(swayX, swayY, 0), .1)
 end
 
-function ViewmodelService:Effects()
-    --ViewmodelService:Sway()
-    self.clonedModel:SetPrimaryPartCFrame(self.camera.CFrame * self.swayCF)
-    
+function ViewmodelService:Bob(deltaTime)
+    local targetBob = CFrame.new()
+    local movement = game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude > 0
+    if movement then
+        local bobX = math.sin(time() * 8) * 0.1
+		local bobY = math.abs(math.cos(time() * 25)) * 0.05
+        targetBob = CFrame.new(bobX, bobY, 0)
+    end
+    self.bob = self.bob:Lerp(targetBob, deltaTime * 5)
+end
+
+function ViewmodelService:Effects(deltaTime)
+    ViewmodelService:Sway()
+    ViewmodelService:Bob(deltaTime)
+    self.clonedModel:SetPrimaryPartCFrame(self.camera.CFrame * self.swayCF * self.bob)    
 end
 
 
