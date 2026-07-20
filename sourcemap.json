@@ -5,74 +5,74 @@
     {
       "name": "Lighting",
       "className": "Lighting",
-      "guid": "144340"
+      "guid": "144209"
     },
     {
       "name": "ReplicatedFirst",
       "className": "ReplicatedFirst",
-      "guid": "144022"
+      "guid": "144014"
     },
     {
       "name": "ReplicatedStorage",
       "className": "ReplicatedStorage",
-      "guid": "144121",
+      "guid": "144084",
       "children": [
         {
-          "name": "Assests",
+          "name": "Assets",
           "className": "Folder",
-          "guid": "144336",
+          "guid": "144167",
           "children": [
             {
               "name": "Images",
               "className": "Folder",
-              "guid": "144338"
+              "guid": "144195"
             },
             {
               "name": "Sounds",
               "className": "Folder",
-              "guid": "144339"
+              "guid": "144196"
             },
             {
               "name": "ViewModels",
               "className": "Folder",
-              "guid": "144337",
+              "guid": "144168",
               "children": [
                 {
                   "name": "Pistol",
                   "className": "Model",
-                  "guid": "144345",
+                  "guid": "144169",
                   "children": [
                     {
                       "name": "AnimationController",
                       "className": "AnimationController",
-                      "guid": "144322",
+                      "guid": "144175",
                       "children": [
                         {
                           "name": "Animator",
                           "className": "Animator",
-                          "guid": "144323"
+                          "guid": "144176"
                         }
                       ]
                     },
                     {
                       "name": "AnimSaves",
                       "className": "ObjectValue",
-                      "guid": "144351"
+                      "guid": "144170"
                     },
                     {
                       "name": "Gun",
                       "className": "MeshPart",
-                      "guid": "144344",
+                      "guid": "144189",
                       "children": [
                         {
                           "name": "Origin",
                           "className": "Attachment",
-                          "guid": "144326",
+                          "guid": "144190",
                           "children": [
                             {
                               "name": "FlashEmitter",
                               "className": "ParticleEmitter",
-                              "guid": "144357"
+                              "guid": "144191"
                             }
                           ]
                         }
@@ -81,78 +81,78 @@
                     {
                       "name": "HumanoidRootPart",
                       "className": "Part",
-                      "guid": "144355",
+                      "guid": "144185",
                       "children": [
                         {
                           "name": "Left Arm",
                           "className": "Motor6D",
-                          "guid": "144349"
+                          "guid": "144186"
                         },
                         {
                           "name": "Right Arm",
                           "className": "Motor6D",
-                          "guid": "144350"
+                          "guid": "144188"
                         }
                       ]
                     },
                     {
                       "name": "Idle",
                       "className": "Animation",
-                      "guid": "144319"
+                      "guid": "144172"
                     },
                     {
                       "name": "Left Arm",
                       "className": "Part",
-                      "guid": "144356",
+                      "guid": "144192",
                       "children": [
                         {
                           "name": "LeftGripAttachment",
                           "className": "Attachment",
-                          "guid": "144327"
+                          "guid": "144193"
                         },
                         {
                           "name": "LeftShoulderAttachment",
                           "className": "Attachment",
-                          "guid": "144328"
+                          "guid": "144194"
                         }
                       ]
                     },
                     {
                       "name": "PickingPistol",
                       "className": "Animation",
-                      "guid": "144318"
+                      "guid": "144171"
                     },
                     {
                       "name": "Right Arm",
                       "className": "Part",
-                      "guid": "144354",
+                      "guid": "144177",
                       "children": [
                         {
                           "name": "Gun",
                           "className": "Motor6D",
-                          "guid": "144348"
+                          "guid": "144182"
                         },
                         {
                           "name": "RightGripAttachment",
                           "className": "Attachment",
-                          "guid": "144325"
+                          "guid": "144184"
                         },
                         {
                           "name": "RightShoulderAttachment",
                           "className": "Attachment",
-                          "guid": "144324"
+                          "guid": "144180"
                         }
                       ]
                     },
                     {
                       "name": "Shooting",
                       "className": "Animation",
-                      "guid": "144320"
+                      "guid": "144173"
                     },
                     {
                       "name": "Steady",
                       "className": "Animation",
-                      "guid": "144321"
+                      "guid": "144174"
                     }
                   ]
                 }
@@ -163,43 +163,44 @@
         {
           "name": "Modules",
           "className": "Folder",
-          "guid": "144334",
+          "guid": "144157",
           "children": [
             {
+              "name": "Hotbar",
+              "className": "ModuleScript",
+              "guid": "144162",
+              "filePaths": [
+                "sync/ReplicatedStorage/Modules/Hotbar.luau"
+              ]
+            },
+            {
               "name": "Inventory",
-              "className": "Folder",
-              "guid": "697240",
-              "children": [
-                {
-                  "name": "Inventory",
-                  "className": "ModuleScript",
-                  "guid": "697243",
-                  "filePaths": [
-                    "sync/ReplicatedStorage/Modules/Inventory/Inventory.luau"
-                  ]
-                },
-                {
-                  "name": "Item",
-                  "className": "ModuleScript",
-                  "guid": "697245",
-                  "filePaths": [
-                    "sync/ReplicatedStorage/Modules/Inventory/Item.luau"
-                  ]
-                },
-                {
-                  "name": "ItemDatabase",
-                  "className": "ModuleScript",
-                  "guid": "697247",
-                  "filePaths": [
-                    "sync/ReplicatedStorage/Modules/Inventory/ItemDatabase.luau"
-                  ]
-                }
+              "className": "ModuleScript",
+              "guid": "144160",
+              "filePaths": [
+                "sync/ReplicatedStorage/Modules/Inventory.luau"
+              ]
+            },
+            {
+              "name": "Item",
+              "className": "ModuleScript",
+              "guid": "144161",
+              "filePaths": [
+                "sync/ReplicatedStorage/Modules/Item.luau"
+              ]
+            },
+            {
+              "name": "ItemDatabase",
+              "className": "ModuleScript",
+              "guid": "144159",
+              "filePaths": [
+                "sync/ReplicatedStorage/Modules/ItemDatabase.luau"
               ]
             },
             {
               "name": "Weapon",
               "className": "ModuleScript",
-              "guid": "697241",
+              "guid": "144158",
               "filePaths": [
                 "sync/ReplicatedStorage/Modules/Weapon.luau"
               ]
@@ -209,22 +210,27 @@
         {
           "name": "Remotes",
           "className": "Folder",
-          "guid": "144335",
+          "guid": "144163",
           "children": [
             {
-              "name": "InventoryAdd",
+              "name": "Equip",
               "className": "RemoteEvent",
-              "guid": "697281"
+              "guid": "971551"
             },
             {
-              "name": "InventoryRemove",
+              "name": "InventoryGet",
+              "className": "RemoteFunction",
+              "guid": "144165"
+            },
+            {
+              "name": "MoveItem",
               "className": "RemoteEvent",
-              "guid": "697351"
+              "guid": "144166"
             },
             {
               "name": "Shoot",
               "className": "RemoteEvent",
-              "guid": "144358"
+              "guid": "144164"
             }
           ]
         }
@@ -233,20 +239,59 @@
     {
       "name": "ServerScriptService",
       "className": "ServerScriptService",
-      "guid": "144122",
+      "guid": "144085",
       "children": [
         {
-          "name": "InventoryServices",
+          "name": "Main",
           "className": "Script",
-          "guid": "697233",
+          "guid": "144202",
           "filePaths": [
-            "sync/ServerScriptService/InventoryServices.server.luau"
+            "sync/ServerScriptService/Main.server.luau"
+          ]
+        },
+        {
+          "name": "Services",
+          "className": "Folder",
+          "guid": "144197",
+          "children": [
+            {
+              "name": "HotbarService",
+              "className": "ModuleScript",
+              "guid": "144198",
+              "filePaths": [
+                "sync/ServerScriptService/Services/HotbarService.luau"
+              ]
+            },
+            {
+              "name": "InventoryService",
+              "className": "ModuleScript",
+              "guid": "144200",
+              "filePaths": [
+                "sync/ServerScriptService/Services/InventoryService.luau"
+              ]
+            },
+            {
+              "name": "MoveItemService",
+              "className": "ModuleScript",
+              "guid": "144199",
+              "filePaths": [
+                "sync/ServerScriptService/Services/MoveItemService.luau"
+              ]
+            },
+            {
+              "name": "PlayerDataService",
+              "className": "ModuleScript",
+              "guid": "144201",
+              "filePaths": [
+                "sync/ServerScriptService/Services/PlayerDataService.luau"
+              ]
+            }
           ]
         },
         {
           "name": "WeaponService",
           "className": "Script",
-          "guid": "697231",
+          "guid": "144204",
           "filePaths": [
             "sync/ServerScriptService/WeaponService.server.luau"
           ]
@@ -256,39 +301,41 @@
     {
       "name": "ServerStorage",
       "className": "ServerStorage",
-      "guid": "144123"
-    },
-    {
-      "name": "SoundService",
-      "className": "SoundService",
-      "guid": "143997"
-    },
-    {
-      "name": "StarterGui",
-      "className": "StarterGui",
-      "guid": "144064"
-    },
-    {
-      "name": "StarterPack",
-      "className": "StarterPack",
-      "guid": "144063",
+      "guid": "144086",
       "children": [
         {
-          "name": "Pistol",
-          "className": "Tool",
-          "guid": "144366",
+          "name": "Tools",
+          "className": "Folder",
+          "guid": "144205",
           "children": [
             {
-              "name": "Handle",
-              "className": "Part",
-              "guid": "144353"
-            },
-            {
-              "name": "Tool",
-              "className": "LocalScript",
-              "guid": "697236",
-              "filePaths": [
-                "sync/StarterPack/Pistol/Tool.client.luau"
+              "name": "pistol",
+              "className": "Tool",
+              "guid": "144206",
+              "children": [
+                {
+                  "name": "Handle",
+                  "className": "Part",
+                  "guid": "144207"
+                },
+                {
+                  "name": "Pistol_Decal",
+                  "className": "Decal",
+                  "guid": "4184975"
+                },
+                {
+                  "name": "Slot",
+                  "className": "IntValue",
+                  "guid": "702861"
+                },
+                {
+                  "name": "Tool",
+                  "className": "LocalScript",
+                  "guid": "144208",
+                  "filePaths": [
+                    "sync/ServerStorage/Tools/pistol/Tool.client.luau"
+                  ]
+                }
               ]
             }
           ]
@@ -296,24 +343,95 @@
       ]
     },
     {
+      "name": "SoundService",
+      "className": "SoundService",
+      "guid": "143989"
+    },
+    {
+      "name": "StarterGui",
+      "className": "StarterGui",
+      "guid": "144028",
+      "children": [
+        {
+          "name": "InventoryGui",
+          "className": "ScreenGui",
+          "guid": "144147",
+          "children": [
+            {
+              "name": "Frame",
+              "className": "Frame",
+              "guid": "144148",
+              "children": [
+                {
+                  "name": "BaseCell",
+                  "className": "Frame",
+                  "guid": "144151",
+                  "children": [
+                    {
+                      "name": "UIAspectRatioConstraint",
+                      "className": "UIAspectRatioConstraint",
+                      "guid": "144152"
+                    }
+                  ]
+                },
+                {
+                  "name": "FreeMouse",
+                  "className": "TextButton",
+                  "guid": "144154"
+                },
+                {
+                  "name": "UICorner",
+                  "className": "UICorner",
+                  "guid": "144150"
+                },
+                {
+                  "name": "UIPadding",
+                  "className": "UIPadding",
+                  "guid": "144149"
+                },
+                {
+                  "name": "UITableLayout",
+                  "className": "UITableLayout",
+                  "guid": "144153"
+                }
+              ]
+            },
+            {
+              "name": "Main",
+              "className": "LocalScript",
+              "guid": "144155",
+              "filePaths": [
+                "sync/StarterGui/InventoryGui/Main.client.luau"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "StarterPack",
+      "className": "StarterPack",
+      "guid": "144027"
+    },
+    {
       "name": "StarterPlayer",
       "className": "StarterPlayer",
-      "guid": "144062",
+      "guid": "144026",
       "children": [
         {
           "name": "StarterCharacterScripts",
           "className": "StarterCharacterScripts",
-          "guid": "144361"
+          "guid": "144146"
         },
         {
           "name": "StarterPlayerScripts",
           "className": "StarterPlayerScripts",
-          "guid": "144362",
+          "guid": "144144",
           "children": [
             {
               "name": "Main",
               "className": "LocalScript",
-              "guid": "697238",
+              "guid": "144145",
               "filePaths": [
                 "sync/StarterPlayer/StarterPlayerScripts/Main.client.luau"
               ]
@@ -325,22 +443,22 @@
     {
       "name": "Workspace",
       "className": "Workspace",
-      "guid": "143155",
+      "guid": "143148",
       "children": [
         {
           "name": "Baseplate",
           "className": "Part",
-          "guid": "144352"
+          "guid": "144138"
         },
         {
           "name": "Camera",
           "className": "Camera",
-          "guid": "144330"
+          "guid": "144137"
         },
         {
           "name": "Terrain",
           "className": "Terrain",
-          "guid": "144364"
+          "guid": "144139"
         }
       ]
     }

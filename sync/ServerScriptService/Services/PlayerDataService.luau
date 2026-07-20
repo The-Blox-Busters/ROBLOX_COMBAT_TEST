@@ -17,19 +17,22 @@ export type PlayerProfile = {
 	Hotbar: Hotbar.Hotbar,
 }
 
+PlayerDataService.PlayerReady = Instance.new("BindableEvent")
+
 function PlayerDataService:Init(_services)
 	Players.PlayerAdded:Connect(function(player)
 		self:CreateProfile(player)
+		PlayerDataService.PlayerReady:Fire(player)
 	end)
 
 	Players.PlayerRemoving:Connect(function(player)
 		self:DestroyProfile(player)
 	end)
 
-	-- ? Studio case: players already in-game
-	for _, player in Players:GetPlayers() do
-		self:CreateProfile(player)
-	end
+	-- -- ? Studio case: players already in-game
+	-- for _, player in Players:GetPlayers() do
+	-- 	self:CreateProfile(player)
+	-- end
 end
 
 function PlayerDataService:CreateProfile(player: Player)

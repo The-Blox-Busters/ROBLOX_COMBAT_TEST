@@ -2,13 +2,15 @@
 
 local player = game.Players.LocalPlayer
 player.CameraMode = Enum.CameraMode.LockFirstPerson
-local ViewFrame = game.ReplicatedStorage.Assests.ViewModels.Pistol
+local ViewFrame = game.ReplicatedStorage.Assets.ViewModels.Pistol
 local GunTool = script.Parent
 local Camera = workspace.Camera
 local RunService = game:GetService("RunService")
 local UserInputService = game:GetService("UserInputService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local shootingEvent = game.ReplicatedStorage.Remotes.Shoot
+local Remotes = ReplicatedStorage.Remotes
+local shootingEvent = Remotes.Shoot
 local mouse = player:GetMouse()
 local shooting
 local pickPistol
@@ -22,7 +24,7 @@ local animationSteady
 
 local isEquipped = false
 
-local fireRate = .2
+local fireRate = 0.2
 
 local debouncer = true
 local swayCF = CFrame.new()
@@ -44,6 +46,7 @@ local viewmodelRecoilYaw = 5
 local viewmodelRecoilRoll = 34
 
 GunTool.Equipped:Connect(function()
+	Remotes.Equip:FireServer(GunTool.Slot.Value)
 	isEquipped = true
 	local ViewFrameClone = ViewFrame:Clone()
 	ViewFrameClone.Name = "ViewFrame"
@@ -65,9 +68,10 @@ GunTool.Equipped:Connect(function()
 end)
 
 GunTool.Unequipped:Connect(function()
+	Remotes.Equip:FireServer(nil)
 	isEquipped = false
-	if Camera:FindFirstChild('ViewFrame') ~= nil then
-		Camera:FindFirstChild('ViewFrame'):Destroy()
+	if Camera:FindFirstChild("ViewFrame") ~= nil then
+		Camera:FindFirstChild("ViewFrame"):Destroy()
 	end
 end)
 
@@ -125,46 +129,48 @@ RunService.RenderStepped:Connect(function(deltaTime)
 		end
 
 		if player.Character.Humanoid.Health <= 0 then
-			if Camera:FindFirstChild('ViewFrame') ~= nil then
-				Camera:FindFirstChild('ViewFrame'):Destroy()
+			if Camera:FindFirstChild("ViewFrame") ~= nil then
+				Camera:FindFirstChild("ViewFrame"):Destroy()
 			end
 		end
-		if Camera:FindFirstChild('ViewFrame') ~= nil then
+		if Camera:FindFirstChild("ViewFrame") ~= nil then
 			--orice camera se duce spre o directie si nu se intoarce inapoi
 			local mouseDelta = UserInputService:GetMouseDelta()
-			local swayX = math.clamp(mouseDelta.X, -.2, .2)
-			local swayY = math.clamp(mouseDelta.Y, -.2, .2)
-			swayCF = swayCF:Lerp(CFrame.new(swayX, swayY, 0), .1)
+			local swayX = math.clamp(mouseDelta.X, -0.2, 0.2)
+			local swayY = math.clamp(mouseDelta.Y, -0.2, 0.2)
+			swayCF = swayCF:Lerp(CFrame.new(swayX, swayY, 0), 0.1)
 			bob = bob:Lerp(targetBob, deltaTime * 5)
 			recoilKickTarget = CFrame.new(0, 0, generalRecoil * 5)
 			recoilKick = recoilKick:Lerp(recoilKickTarget, deltaTime * 10)
 
 			recoilViewModel = recoilViewModel:Lerp(
-				CFrame.Angles(math.rad(generalRecoil * viewmodelRecoilPitch),
+				CFrame.Angles(
+					math.rad(generalRecoil * viewmodelRecoilPitch),
 					math.rad(generalRecoil * viewmodelRecoilYaw),
-					math.rad(generalRecoil * viewmodelRecoilRoll)), deltaTime)
+					math.rad(generalRecoil * viewmodelRecoilRoll)
+				),
+				deltaTime
+			)
 			Camera.ViewFrame:SetPrimaryPartCFrame(Camera.CFrame * swayCF * bob * recoilViewModel * recoilKick)
-
-
-
 
 			local baseCamera = Camera.CFrame
 			generalRecoil = math.max(generalRecoil - (recoilRecovery * deltaTime), 0)
-			print("generalRecoil: " .. generalRecoil)
+			--print("generalRecoil: " .. generalRecoil)
 
 			recoilCameraTarget = CFrame.Angles(
 				math.rad(generalRecoil * recoilInstensity),
 				math.rad(math.random(-generalRecoil * (recoilInstensity * 3), generalRecoil * (recoilInstensity * 3))),
-				0)
+				0
+			)
 
 			recoilCameraCF = recoilCameraCF:Lerp(recoilCameraTarget, deltaTime * 30)
-			print("deltaTime: " .. deltaTime)
+			--print("deltaTime: " .. deltaTime)
 
 			Camera.CFrame = baseCamera * recoilCameraCF
 		end
 	else
-		if Camera:FindFirstChild('ViewFrame') ~= nil then
-			Camera:FindFirstChild('ViewFrame'):Destroy()
+		if Camera:FindFirstChild("ViewFrame") ~= nil then
+			Camera:FindFirstChild("ViewFrame"):Destroy()
 		end
 	end
 end)

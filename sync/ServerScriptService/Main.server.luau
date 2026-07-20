@@ -2,8 +2,8 @@ local ServicesFolder = script.Parent.Services
 
 local Services = {
 	PlayerData = require(ServicesFolder.PlayerDataService),
+	Hotbar = require(ServicesFolder.HotbarService),
 	-- Inventory = require(ServicesFolder.InventoryService),
-	-- Hotbar = require(ServicesFolder.HotbarService),
 	-- MoveItem = require(ServicesFolder.MoveItemService),
 }
 
