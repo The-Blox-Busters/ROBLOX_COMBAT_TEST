@@ -1,0 +1,2356 @@
+{
+  "name": "Game",
+  "className": "DataModel",
+  "children": [
+    {
+      "name": "Lighting",
+      "className": "Lighting",
+      "guid": "144416",
+      "properties": {
+        "ClockTime": 14,
+        "ColorShift_Bottom": {
+          "b": 0,
+          "__type": "Color3",
+          "g": 0,
+          "r": 0
+        },
+        "FogColor": {
+          "b": 0.75,
+          "__type": "Color3",
+          "g": 0.75,
+          "r": 0.75
+        },
+        "FogEnd": 100000,
+        "EnvironmentDiffuseScale": 0,
+        "Brightness": 2,
+        "archivable": true,
+        "PrioritizeLightingQuality": false,
+        "GeographicLatitude": 41.733299255371094,
+        "Archivable": true,
+        "ExposureCompensation": 0,
+        "LightingStyle": {
+          "__type": "EnumItem",
+          "enumType": "LightingStyle",
+          "name": "Soft"
+        },
+        "Sandboxed": false,
+        "GlobalShadows": true,
+        "EnvironmentSpecularScale": 0,
+        "FogStart": 0,
+        "TimeOfDay": "14:00:00",
+        "Ambient": {
+          "b": 0,
+          "__type": "Color3",
+          "g": 0,
+          "r": 0
+        },
+        "OutdoorAmbient": {
+          "b": 0.5,
+          "__type": "Color3",
+          "g": 0.5,
+          "r": 0.5
+        },
+        "ShadowColor": {
+          "b": 0.7200000286102295,
+          "__type": "Color3",
+          "g": 0.699999988079071,
+          "r": 0.699999988079071
+        },
+        "Outlines": false,
+        "ShadowSoftness": 0.5,
+        "ColorShift_Top": {
+          "b": 0,
+          "__type": "Color3",
+          "g": 0,
+          "r": 0
+        }
+      },
+      "attributes": {
+        "RBX_LightingTechnologyUnifiedMigration": true
+      }
+    },
+    {
+      "name": "ReplicatedFirst",
+      "className": "ReplicatedFirst",
+      "guid": "144041",
+      "properties": {
+        "Sandboxed": false,
+        "Archivable": true,
+        "archivable": true
+      }
+    },
+    {
+      "name": "ReplicatedStorage",
+      "className": "ReplicatedStorage",
+      "guid": "144155",
+      "children": [
+        {
+          "name": "Assets",
+          "className": "Folder",
+          "guid": "144377",
+          "children": [
+            {
+              "name": "Images",
+              "className": "Folder",
+              "guid": "144400"
+            },
+            {
+              "name": "Sounds",
+              "className": "Folder",
+              "guid": "144401"
+            },
+            {
+              "name": "ViewModels",
+              "className": "Folder",
+              "guid": "144378",
+              "children": [
+                {
+                  "name": "Pistol",
+                  "className": "Model",
+                  "guid": "144379",
+                  "children": [
+                    {
+                      "name": "AnimationController",
+                      "className": "AnimationController",
+                      "guid": "144385",
+                      "children": [
+                        {
+                          "name": "Animator",
+                          "className": "Animator",
+                          "guid": "144386"
+                        }
+                      ]
+                    },
+                    {
+                      "name": "AnimSaves",
+                      "className": "ObjectValue",
+                      "guid": "144380"
+                    },
+                    {
+                      "name": "Gun",
+                      "className": "MeshPart",
+                      "guid": "144394",
+                      "children": [
+                        {
+                          "name": "Origin",
+                          "className": "Attachment",
+                          "guid": "144395",
+                          "children": [
+                            {
+                              "name": "FlashEmitter",
+                              "className": "ParticleEmitter",
+                              "guid": "144396",
+                              "properties": {
+                                "Enabled": false,
+                                "Color": {
+                                  "keypoints": [
+                                    {
+                                      "time": 0,
+                                      "color": {
+                                        "b": 0.1529410034418106,
+                                        "__type": "Color3",
+                                        "g": 0.5764709711074829,
+                                        "r": 1
+                                      }
+                                    },
+                                    {
+                                      "time": 1,
+                                      "color": {
+                                        "b": 0.1529410034418106,
+                                        "__type": "Color3",
+                                        "g": 0.5764709711074829,
+                                        "r": 1
+                                      }
+                                    }
+                                  ],
+                                  "__type": "ColorSequence"
+                                },
+                                "Rate": 10,
+                                "VelocitySpread": 20,
+                                "Orientation": {
+                                  "__type": "EnumItem",
+                                  "enumType": "ParticleOrientation",
+                                  "name": "VelocityParallel"
+                                },
+                                "Rotation": {
+                                  "min": 0,
+                                  "__type": "NumberRange",
+                                  "max": 360
+                                },
+                                "Lifetime": {
+                                  "min": 0.07999999821186066,
+                                  "__type": "NumberRange",
+                                  "max": 0.07999999821186066
+                                },
+                                "Speed": {
+                                  "min": 2,
+                                  "__type": "NumberRange",
+                                  "max": 5
+                                },
+                                "Texture": "rbxassetid://266422660",
+                                "LightEmission": 1,
+                                "SpreadAngle": {
+                                  "y": 20,
+                                  "__type": "Vector2",
+                                  "x": 20
+                                }
+                              }
+                            }
+                          ],
+                          "properties": {
+                            "WorldPosition": {
+                              "y": -0.43613043427467346,
+                              "__type": "Vector3",
+                              "x": -3.6612942218780518,
+                              "z": -14.355934143066406
+                            },
+                            "Position": {
+                              "y": 0.39984941482543945,
+                              "__type": "Vector3",
+                              "x": 0.7329304218292236,
+                              "z": -0.00000762939453125
+                            },
+                            "WorldCFrame": {
+                              "components": [
+                                -3.6612942218780518,
+                                -0.43613043427467346,
+                                -14.355934143066406,
+                                0.12395399808883667,
+                                -0.4449424743652344,
+                                0.8869407773017883,
+                                -0.7991939187049866,
+                                0.48503372073173523,
+                                0.35501277446746826,
+                                -0.5881556272506714,
+                                -0.7528418302536011,
+                                -0.29547351598739624
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldOrientation": {
+                              "y": 108.42483520507812,
+                              "__type": "Vector3",
+                              "x": -20.79425048828125,
+                              "z": -58.746280670166016
+                            },
+                            "CFrame": {
+                              "components": [
+                                0.7329304218292236,
+                                0.39984941482543945,
+                                -0.00000762939453125,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldAxis": {
+                              "y": -0.7991939187049866,
+                              "__type": "Vector3",
+                              "x": 0.12395399808883667,
+                              "z": -0.5881556272506714
+                            },
+                            "WorldSecondaryAxis": {
+                              "y": 0.48503372073173523,
+                              "__type": "Vector3",
+                              "x": -0.4449424743652344,
+                              "z": -0.7528418302536011
+                            }
+                          }
+                        }
+                      ],
+                      "properties": {
+                        "CanCollide": false,
+                        "TextureID": "rbxassetid://100977364427175",
+                        "CFrame": {
+                          "components": [
+                            -3.5742270946502686,
+                            -0.04431462287902832,
+                            -13.623835563659668,
+                            0.12395399808883667,
+                            -0.4449424743652344,
+                            0.8869407773017883,
+                            -0.7991939187049866,
+                            0.48503372073173523,
+                            0.35501277446746826,
+                            -0.5881556272506714,
+                            -0.7528418302536011,
+                            -0.29547351598739624
+                          ],
+                          "__type": "CFrame"
+                        },
+                        "Rotation": {
+                          "y": 62.49100112915039,
+                          "__type": "Vector3",
+                          "x": -129.77000427246094,
+                          "z": 74.43299865722656
+                        },
+                        "Position": {
+                          "y": -0.04431462287902832,
+                          "__type": "Vector3",
+                          "x": -3.5742270946502686,
+                          "z": -13.623835563659668
+                        },
+                        "Orientation": {
+                          "y": 108.42500305175781,
+                          "__type": "Vector3",
+                          "x": -20.79400062561035,
+                          "z": -58.74599838256836
+                        },
+                        "MeshId": "rbxassetid://83881879218999",
+                        "Size": {
+                          "y": 1.1059999465942383,
+                          "__type": "Vector3",
+                          "x": 1.6119999885559082,
+                          "z": 0.24400000274181366
+                        },
+                        "size": {
+                          "y": 1.1059999465942383,
+                          "__type": "Vector3",
+                          "x": 1.6119999885559082,
+                          "z": 0.24400000274181366
+                        }
+                      },
+                      "attributes": {
+                        "Rojo_Id": "4cdfa2215b6ec3280a66cdc3000003bf"
+                      }
+                    },
+                    {
+                      "name": "HumanoidRootPart",
+                      "className": "Part",
+                      "guid": "144391",
+                      "children": [
+                        {
+                          "name": "Left Arm",
+                          "className": "Motor6D",
+                          "guid": "144392",
+                          "properties": {
+                            "part1": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "Left Arm"
+                              ],
+                              "guid": "144397"
+                            },
+                            "Part0": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "HumanoidRootPart"
+                              ],
+                              "guid": "144391"
+                            },
+                            "C0": {
+                              "components": [
+                                0.39655375480651855,
+                                -1.277234673500061,
+                                -1.4694199562072754,
+                                0.9723405241966248,
+                                -0.23345902562141418,
+                                0.007780361454933882,
+                                -0.037185490131378174,
+                                -0.1875859797000885,
+                                -0.9815489053726196,
+                                0.23060788214206696,
+                                0.9541059732437134,
+                                -0.19107705354690552
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "Part1": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "Left Arm"
+                              ],
+                              "guid": "144397"
+                            },
+                            "C1": {
+                              "components": [
+                                0.159134641289711,
+                                0.17225463688373566,
+                                -0.03039240464568138,
+                                0.7324157357215881,
+                                -0.3227461874485016,
+                                -0.5995033979415894,
+                                -0.26024162769317627,
+                                0.680949330329895,
+                                -0.6845309734344482,
+                                0.6291612386703491,
+                                0.6573770642280579,
+                                0.4147457182407379
+                              ],
+                              "__type": "CFrame"
+                            }
+                          },
+                          "attributes": {
+                            "Rojo_Target_Part1": "4cdfa2215b6ec3280a66cdc3000003c2",
+                            "Rojo_Target_Part0": "4cdfa2215b6ec3280a66cdc3000003bc"
+                          }
+                        },
+                        {
+                          "name": "Right Arm",
+                          "className": "Motor6D",
+                          "guid": "144393",
+                          "properties": {
+                            "part1": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "Right Arm"
+                              ],
+                              "guid": "144387"
+                            },
+                            "Part0": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "HumanoidRootPart"
+                              ],
+                              "guid": "144391"
+                            },
+                            "C0": {
+                              "components": [
+                                1.4994829893112183,
+                                -1.1066590547561646,
+                                -1.6797715425491333,
+                                0.8745438456535339,
+                                0.484945684671402,
+                                0.000897337042260915,
+                                0.06549227237701416,
+                                -0.11627396196126938,
+                                -0.9910556077957153,
+                                -0.48050376772880554,
+                                0.8667803406715393,
+                                -0.1334468424320221
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "Part1": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "Right Arm"
+                              ],
+                              "guid": "144387"
+                            },
+                            "C1": {
+                              "components": [
+                                -0.0000014535971786244772,
+                                0.1681760549545288,
+                                0.36568671464920044,
+                                1.000001311302185,
+                                -1.000252467520113e-7,
+                                -2.575581703467833e-8,
+                                -3.2818377349030925e-8,
+                                0.41405490040779114,
+                                -0.9102530479431152,
+                                -7.63183507501708e-8,
+                                0.9102528691291809,
+                                0.4140552282333374
+                              ],
+                              "__type": "CFrame"
+                            }
+                          },
+                          "attributes": {
+                            "Rojo_Target_Part1": "4cdfa2215b6ec3280a66cdc3000003b8",
+                            "Rojo_Target_Part0": "4cdfa2215b6ec3280a66cdc3000003bc"
+                          }
+                        }
+                      ],
+                      "properties": {
+                        "BottomSurface": {
+                          "__type": "EnumItem",
+                          "enumType": "SurfaceType",
+                          "name": "Smooth"
+                        },
+                        "CanCollide": false,
+                        "CFrame": {
+                          "components": [
+                            -4.504209518432617,
+                            2.1660799980163574,
+                            -10.517772674560547,
+                            1,
+                            0,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                            0,
+                            1
+                          ],
+                          "__type": "CFrame"
+                        },
+                        "Transparency": 1,
+                        "Position": {
+                          "y": 2.1660799980163574,
+                          "__type": "Vector3",
+                          "x": -4.504209518432617,
+                          "z": -10.517772674560547
+                        },
+                        "TopSurface": {
+                          "__type": "EnumItem",
+                          "enumType": "SurfaceType",
+                          "name": "Smooth"
+                        },
+                        "Anchored": true,
+                        "Size": {
+                          "y": 1.0258351564407349,
+                          "__type": "Vector3",
+                          "x": 0.9915808439254761,
+                          "z": 0.964454174041748
+                        },
+                        "size": {
+                          "y": 1.0258351564407349,
+                          "__type": "Vector3",
+                          "x": 0.9915808439254761,
+                          "z": 0.964454174041748
+                        }
+                      },
+                      "attributes": {
+                        "Rojo_Id": "4cdfa2215b6ec3280a66cdc3000003bc"
+                      }
+                    },
+                    {
+                      "name": "Idle",
+                      "className": "Animation",
+                      "guid": "144382",
+                      "properties": {
+                        "AnimationId": "rbxassetid://112836134671292"
+                      }
+                    },
+                    {
+                      "name": "Left Arm",
+                      "className": "Part",
+                      "guid": "144397",
+                      "children": [
+                        {
+                          "name": "LeftGripAttachment",
+                          "className": "Attachment",
+                          "guid": "144398",
+                          "properties": {
+                            "WorldPosition": {
+                              "y": -0.1968013048171997,
+                              "__type": "Vector3",
+                              "x": -3.48736834526062,
+                              "z": -13.223922729492188
+                            },
+                            "Position": {
+                              "y": -1.5789262056350708,
+                              "__type": "Vector3",
+                              "x": 0,
+                              "z": 0
+                            },
+                            "WorldCFrame": {
+                              "components": [
+                                -3.48736834526062,
+                                -0.1968013048171997,
+                                -13.223922729492188,
+                                0.7828365564346313,
+                                -0.4173397123813629,
+                                0.46151334047317505,
+                                0.6217457056045532,
+                                0.5538395643234253,
+                                -0.5537996888160706,
+                                -0.024481741711497307,
+                                0.7204785346984863,
+                                0.6930449604988098
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldOrientation": {
+                              "y": 33.66048812866211,
+                              "__type": "Vector3",
+                              "x": 33.628082275390625,
+                              "z": 48.30594253540039
+                            },
+                            "CFrame": {
+                              "components": [
+                                0,
+                                -1.5789262056350708,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldAxis": {
+                              "y": 0.6217457056045532,
+                              "__type": "Vector3",
+                              "x": 0.7828365564346313,
+                              "z": -0.024481741711497307
+                            },
+                            "WorldSecondaryAxis": {
+                              "y": 0.5538395643234253,
+                              "__type": "Vector3",
+                              "x": -0.4173397123813629,
+                              "z": 0.7204785346984863
+                            }
+                          }
+                        },
+                        {
+                          "name": "LeftShoulderAttachment",
+                          "className": "Attachment",
+                          "guid": "144399",
+                          "properties": {
+                            "WorldPosition": {
+                              "y": 1.5521422624588013,
+                              "__type": "Vector3",
+                              "x": -4.805265426635742,
+                              "z": -10.94875717163086
+                            },
+                            "Position": {
+                              "y": 1.5789262056350708,
+                              "__type": "Vector3",
+                              "x": 0,
+                              "z": 0
+                            },
+                            "WorldCFrame": {
+                              "components": [
+                                -4.805265426635742,
+                                1.5521422624588013,
+                                -10.94875717163086,
+                                0.7828365564346313,
+                                -0.4173397123813629,
+                                0.46151334047317505,
+                                0.6217457056045532,
+                                0.5538395643234253,
+                                -0.5537996888160706,
+                                -0.024481741711497307,
+                                0.7204785346984863,
+                                0.6930449604988098
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldOrientation": {
+                              "y": 33.66048812866211,
+                              "__type": "Vector3",
+                              "x": 33.628082275390625,
+                              "z": 48.30594253540039
+                            },
+                            "CFrame": {
+                              "components": [
+                                0,
+                                1.5789262056350708,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldAxis": {
+                              "y": 0.6217457056045532,
+                              "__type": "Vector3",
+                              "x": 0.7828365564346313,
+                              "z": -0.024481741711497307
+                            },
+                            "WorldSecondaryAxis": {
+                              "y": 0.5538395643234253,
+                              "__type": "Vector3",
+                              "x": -0.4173397123813629,
+                              "z": 0.7204785346984863
+                            }
+                          }
+                        }
+                      ],
+                      "properties": {
+                        "formFactor": {
+                          "__type": "EnumItem",
+                          "enumType": "FormFactor",
+                          "name": "Symmetric"
+                        },
+                        "CanCollide": false,
+                        "Color": {
+                          "b": 0.6000000238418579,
+                          "__type": "Color3",
+                          "g": 0.800000011920929,
+                          "r": 1
+                        },
+                        "CFrame": {
+                          "components": [
+                            -4.146317005157471,
+                            0.6776704788208008,
+                            -12.086339950561523,
+                            0.7828365564346313,
+                            -0.4173397123813629,
+                            0.46151334047317505,
+                            0.6217457056045532,
+                            0.5538395643234253,
+                            -0.5537996888160706,
+                            -0.024481741711497307,
+                            0.7204785346984863,
+                            0.6930449604988098
+                          ],
+                          "__type": "CFrame"
+                        },
+                        "FormFactor": {
+                          "__type": "EnumItem",
+                          "enumType": "FormFactor",
+                          "name": "Symmetric"
+                        },
+                        "Rotation": {
+                          "y": 27.485000610351562,
+                          "__type": "Vector3",
+                          "x": 38.62799835205078,
+                          "z": 28.062999725341797
+                        },
+                        "BrickColor": {
+                          "number": 1030,
+                          "__type": "BrickColor"
+                        },
+                        "brickColor": {
+                          "number": 1030,
+                          "__type": "BrickColor"
+                        },
+                        "Position": {
+                          "y": 0.6776704788208008,
+                          "__type": "Vector3",
+                          "x": -4.146317005157471,
+                          "z": -12.086339950561523
+                        },
+                        "Orientation": {
+                          "y": 33.65999984741211,
+                          "__type": "Vector3",
+                          "x": 33.62799835205078,
+                          "z": 48.305999755859375
+                        },
+                        "Material": {
+                          "__type": "EnumItem",
+                          "enumType": "Material",
+                          "name": "SmoothPlastic"
+                        },
+                        "Size": {
+                          "y": 2.352797031402588,
+                          "__type": "Vector3",
+                          "x": 0.6620000004768372,
+                          "z": 1.0969915390014648
+                        },
+                        "size": {
+                          "y": 2.352797031402588,
+                          "__type": "Vector3",
+                          "x": 0.6620000004768372,
+                          "z": 1.0969915390014648
+                        }
+                      },
+                      "attributes": {
+                        "Rojo_Id": "4cdfa2215b6ec3280a66cdc3000003c2"
+                      }
+                    },
+                    {
+                      "name": "PickingPistol",
+                      "className": "Animation",
+                      "guid": "144381",
+                      "properties": {
+                        "AnimationId": "rbxassetid://76128897996896"
+                      }
+                    },
+                    {
+                      "name": "Right Arm",
+                      "className": "Part",
+                      "guid": "144387",
+                      "children": [
+                        {
+                          "name": "Gun",
+                          "className": "Motor6D",
+                          "guid": "144389",
+                          "properties": {
+                            "Part0": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "Right Arm"
+                              ],
+                              "guid": "144387"
+                            },
+                            "C0": {
+                              "components": [
+                                0.11499717831611633,
+                                -1.5734022855758667,
+                                -0.36269664764404297,
+                                0.3386726975440979,
+                                0.004387468099594116,
+                                0.9408941268920898,
+                                -0.9402250647544861,
+                                -0.036414481699466705,
+                                0.33860158920288086,
+                                0.03574775904417038,
+                                -0.9993271827697754,
+                                -0.00820738635957241
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "Part1": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "Gun"
+                              ],
+                              "guid": "144394"
+                            },
+                            "part1": {
+                              "__type": "InstanceRef",
+                              "path": [
+                                "ReplicatedStorage",
+                                "Assets",
+                                "ViewModels",
+                                "Pistol",
+                                "Gun"
+                              ],
+                              "guid": "144394"
+                            }
+                          },
+                          "attributes": {
+                            "Rojo_Target_Part1": "4cdfa2215b6ec3280a66cdc3000003bf",
+                            "Rojo_Target_Part0": "4cdfa2215b6ec3280a66cdc3000003b8"
+                          }
+                        },
+                        {
+                          "name": "RightGripAttachment",
+                          "className": "Attachment",
+                          "guid": "144390",
+                          "properties": {
+                            "WorldPosition": {
+                              "y": -0.1499561071395874,
+                              "__type": "Vector3",
+                              "x": -3.493692398071289,
+                              "z": -13.25232982635498
+                            },
+                            "Position": {
+                              "y": -1.4690535068511963,
+                              "__type": "Vector3",
+                              "x": 0,
+                              "z": 0
+                            },
+                            "WorldCFrame": {
+                              "components": [
+                                -3.493692398071289,
+                                -0.1499561071395874,
+                                -13.25232982635498,
+                                0.8745449185371399,
+                                0.19997729361057281,
+                                0.4417946934700012,
+                                0.06549239903688431,
+                                0.8539676070213318,
+                                -0.5161904692649841,
+                                -0.48050448298454285,
+                                0.4803650677204132,
+                                0.7337350249290466
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldOrientation": {
+                              "y": 31.052894592285156,
+                              "__type": "Vector3",
+                              "x": 31.077083587646484,
+                              "z": 4.385537624359131
+                            },
+                            "CFrame": {
+                              "components": [
+                                0,
+                                -1.4690535068511963,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldAxis": {
+                              "y": 0.06549239903688431,
+                              "__type": "Vector3",
+                              "x": 0.8745449185371399,
+                              "z": -0.48050448298454285
+                            },
+                            "WorldSecondaryAxis": {
+                              "y": 0.8539676070213318,
+                              "__type": "Vector3",
+                              "x": 0.19997729361057281,
+                              "z": 0.4803650677204132
+                            }
+                          }
+                        },
+                        {
+                          "name": "RightShoulderAttachment",
+                          "className": "Attachment",
+                          "guid": "144388",
+                          "properties": {
+                            "WorldPosition": {
+                              "y": 2.3590922355651855,
+                              "__type": "Vector3",
+                              "x": -2.9061379432678223,
+                              "z": -11.84096622467041
+                            },
+                            "Position": {
+                              "y": 1.4690535068511963,
+                              "__type": "Vector3",
+                              "x": 0,
+                              "z": 0
+                            },
+                            "WorldCFrame": {
+                              "components": [
+                                -2.9061379432678223,
+                                2.3590922355651855,
+                                -11.84096622467041,
+                                0.8745449185371399,
+                                0.19997729361057281,
+                                0.4417946934700012,
+                                0.06549239903688431,
+                                0.8539676070213318,
+                                -0.5161904692649841,
+                                -0.48050448298454285,
+                                0.4803650677204132,
+                                0.7337350249290466
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldOrientation": {
+                              "y": 31.052894592285156,
+                              "__type": "Vector3",
+                              "x": 31.077083587646484,
+                              "z": 4.385537624359131
+                            },
+                            "CFrame": {
+                              "components": [
+                                0,
+                                1.4690535068511963,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                              ],
+                              "__type": "CFrame"
+                            },
+                            "WorldAxis": {
+                              "y": 0.06549239903688431,
+                              "__type": "Vector3",
+                              "x": 0.8745449185371399,
+                              "z": -0.48050448298454285
+                            },
+                            "WorldSecondaryAxis": {
+                              "y": 0.8539676070213318,
+                              "__type": "Vector3",
+                              "x": 0.19997729361057281,
+                              "z": 0.4803650677204132
+                            }
+                          }
+                        }
+                      ],
+                      "properties": {
+                        "formFactor": {
+                          "__type": "EnumItem",
+                          "enumType": "FormFactor",
+                          "name": "Symmetric"
+                        },
+                        "CanCollide": false,
+                        "Color": {
+                          "b": 0.6000000238418579,
+                          "__type": "Color3",
+                          "g": 0.800000011920929,
+                          "r": 1
+                        },
+                        "CFrame": {
+                          "components": [
+                            -3.1999151706695557,
+                            1.1045680046081543,
+                            -12.546648025512695,
+                            0.8745449185371399,
+                            0.19997729361057281,
+                            0.4417946934700012,
+                            0.06549239903688431,
+                            0.8539676070213318,
+                            -0.5161904692649841,
+                            -0.48050448298454285,
+                            0.4803650677204132,
+                            0.7337350249290466
+                          ],
+                          "__type": "CFrame"
+                        },
+                        "FormFactor": {
+                          "__type": "EnumItem",
+                          "enumType": "FormFactor",
+                          "name": "Symmetric"
+                        },
+                        "Rotation": {
+                          "y": 26.218000411987305,
+                          "__type": "Vector3",
+                          "x": 35.12699890136719,
+                          "z": -12.880000114440918
+                        },
+                        "BrickColor": {
+                          "number": 1030,
+                          "__type": "BrickColor"
+                        },
+                        "brickColor": {
+                          "number": 1030,
+                          "__type": "BrickColor"
+                        },
+                        "Position": {
+                          "y": 1.1045680046081543,
+                          "__type": "Vector3",
+                          "x": -3.1999151706695557,
+                          "z": -12.546648025512695
+                        },
+                        "Orientation": {
+                          "y": 31.05299949645996,
+                          "__type": "Vector3",
+                          "x": 31.07699966430664,
+                          "z": 4.386000156402588
+                        },
+                        "Material": {
+                          "__type": "EnumItem",
+                          "enumType": "Material",
+                          "name": "SmoothPlastic"
+                        },
+                        "Size": {
+                          "y": 2.937303066253662,
+                          "__type": "Vector3",
+                          "x": 0.6623985171318054,
+                          "z": 1.02470862865448
+                        },
+                        "size": {
+                          "y": 2.937303066253662,
+                          "__type": "Vector3",
+                          "x": 0.6623985171318054,
+                          "z": 1.02470862865448
+                        }
+                      },
+                      "attributes": {
+                        "Rojo_Id": "4cdfa2215b6ec3280a66cdc3000003b8"
+                      }
+                    },
+                    {
+                      "name": "Shooting",
+                      "className": "Animation",
+                      "guid": "144383",
+                      "properties": {
+                        "AnimationId": "rbxassetid://95709629645901"
+                      }
+                    },
+                    {
+                      "name": "Steady",
+                      "className": "Animation",
+                      "guid": "144384",
+                      "properties": {
+                        "AnimationId": "rbxassetid://83460419313932"
+                      }
+                    }
+                  ],
+                  "properties": {
+                    "WorldPivot": {
+                      "components": [
+                        -4.504209518432617,
+                        2.1660799980163574,
+                        -10.517772674560547,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ],
+                      "__type": "CFrame"
+                    },
+                    "PrimaryPart": {
+                      "__type": "InstanceRef",
+                      "path": [
+                        "ReplicatedStorage",
+                        "Assets",
+                        "ViewModels",
+                        "Pistol",
+                        "HumanoidRootPart"
+                      ],
+                      "guid": "144391"
+                    }
+                  },
+                  "attributes": {
+                    "Rojo_Target_PrimaryPart": "4cdfa2215b6ec3280a66cdc3000003bc"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Modules",
+          "className": "Folder",
+          "guid": "144366",
+          "children": [
+            {
+              "name": "Hotbar",
+              "className": "ModuleScript",
+              "guid": "144371"
+            },
+            {
+              "name": "Inventory",
+              "className": "ModuleScript",
+              "guid": "144369"
+            },
+            {
+              "name": "Item",
+              "className": "ModuleScript",
+              "guid": "144370"
+            },
+            {
+              "name": "ItemDatabase",
+              "className": "ModuleScript",
+              "guid": "144368"
+            },
+            {
+              "name": "Weapon",
+              "className": "ModuleScript",
+              "guid": "144367"
+            }
+          ]
+        },
+        {
+          "name": "Remotes",
+          "className": "Folder",
+          "guid": "144372",
+          "children": [
+            {
+              "name": "Equip",
+              "className": "RemoteEvent",
+              "guid": "144376"
+            },
+            {
+              "name": "InventoryGet",
+              "className": "RemoteFunction",
+              "guid": "144374"
+            },
+            {
+              "name": "MoveItem",
+              "className": "RemoteFunction",
+              "guid": "5062548"
+            },
+            {
+              "name": "Shoot",
+              "className": "RemoteEvent",
+              "guid": "144373"
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "Sandboxed": false,
+        "Archivable": true,
+        "archivable": true
+      }
+    },
+    {
+      "name": "ServerScriptService",
+      "className": "ServerScriptService",
+      "guid": "144156",
+      "children": [
+        {
+          "name": "Main",
+          "className": "Script",
+          "guid": "144407"
+        },
+        {
+          "name": "Services",
+          "className": "Folder",
+          "guid": "144402",
+          "children": [
+            {
+              "name": "HotbarService",
+              "className": "ModuleScript",
+              "guid": "144403"
+            },
+            {
+              "name": "InventoryService",
+              "className": "ModuleScript",
+              "guid": "144405"
+            },
+            {
+              "name": "MoveItemService",
+              "className": "ModuleScript",
+              "guid": "144404"
+            },
+            {
+              "name": "PlayerDataService",
+              "className": "ModuleScript",
+              "guid": "144406"
+            }
+          ]
+        },
+        {
+          "name": "WeaponService",
+          "className": "Script",
+          "guid": "144409"
+        }
+      ],
+      "properties": {
+        "Sandboxed": false,
+        "Archivable": true,
+        "archivable": true
+      }
+    },
+    {
+      "name": "ServerStorage",
+      "className": "ServerStorage",
+      "guid": "144157",
+      "children": [
+        {
+          "name": "Tools",
+          "className": "Folder",
+          "guid": "144410",
+          "children": [
+            {
+              "name": "pistol",
+              "className": "Tool",
+              "guid": "144411",
+              "children": [
+                {
+                  "name": "Handle",
+                  "className": "Part",
+                  "guid": "144412",
+                  "properties": {
+                    "Position": {
+                      "y": 0.5,
+                      "__type": "Vector3",
+                      "x": 23,
+                      "z": 26
+                    },
+                    "Transparency": 1,
+                    "BottomSurface": {
+                      "__type": "EnumItem",
+                      "enumType": "SurfaceType",
+                      "name": "Smooth"
+                    },
+                    "CanCollide": false,
+                    "TopSurface": {
+                      "__type": "EnumItem",
+                      "enumType": "SurfaceType",
+                      "name": "Smooth"
+                    },
+                    "CFrame": {
+                      "components": [
+                        23,
+                        0.5,
+                        26,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1,
+                        0,
+                        0,
+                        0,
+                        1
+                      ],
+                      "__type": "CFrame"
+                    },
+                    "Size": {
+                      "y": 1,
+                      "__type": "Vector3",
+                      "x": 4,
+                      "z": 2
+                    },
+                    "size": {
+                      "y": 1,
+                      "__type": "Vector3",
+                      "x": 4,
+                      "z": 2
+                    }
+                  }
+                },
+                {
+                  "name": "Pistol_Decal",
+                  "className": "Decal",
+                  "guid": "144415",
+                  "properties": {
+                    "ColorMap": "rbxassetid://413788230",
+                    "Texture": "rbxassetid://413788230"
+                  }
+                },
+                {
+                  "name": "Slot",
+                  "className": "IntValue",
+                  "guid": "144414"
+                },
+                {
+                  "name": "Tool",
+                  "className": "LocalScript",
+                  "guid": "144413"
+                }
+              ],
+              "properties": {
+                "WorldPivot": {
+                  "components": [
+                    23,
+                    0.5,
+                    26,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1,
+                    0,
+                    0,
+                    0,
+                    1
+                  ],
+                  "__type": "CFrame"
+                },
+                "TextureId": "rbxassetid://413788230"
+              }
+            }
+          ]
+        }
+      ],
+      "properties": {
+        "Sandboxed": false,
+        "Archivable": true,
+        "archivable": true
+      }
+    },
+    {
+      "name": "SoundService",
+      "className": "SoundService",
+      "guid": "143955",
+      "properties": {
+        "DiffractionEnabled": true,
+        "OcclusionEnabled": true,
+        "DistanceFactor": 3.3299999237060547,
+        "RolloffScale": 1,
+        "DopplerScale": 1,
+        "RespectFilteringEnabled": true,
+        "AcousticSimulationEnabled": false,
+        "ReverbEnabled": true,
+        "AmbientReverb": {
+          "__type": "EnumItem",
+          "enumType": "ReverbType",
+          "name": "NoReverb"
+        },
+        "Sandboxed": false,
+        "ListenerType": {
+          "__type": "EnumItem",
+          "enumType": "ListenerType",
+          "name": "Camera"
+        },
+        "archivable": true,
+        "CharacterSoundsUseNewApi": {
+          "__type": "EnumItem",
+          "enumType": "RolloutState",
+          "name": "Default"
+        },
+        "Archivable": true,
+        "ListenerCFrame": {
+          "components": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "__type": "CFrame"
+        }
+      }
+    },
+    {
+      "name": "StarterGui",
+      "className": "StarterGui",
+      "guid": "144101",
+      "children": [
+        {
+          "name": "InventoryGui",
+          "className": "ScreenGui",
+          "guid": "144356",
+          "children": [
+            {
+              "name": "Frame",
+              "className": "Frame",
+              "guid": "144357",
+              "children": [
+                {
+                  "name": "FreeMouse",
+                  "className": "TextButton",
+                  "guid": "144360",
+                  "properties": {
+                    "FontSize": {
+                      "__type": "EnumItem",
+                      "enumType": "FontSize",
+                      "name": "Size14"
+                    },
+                    "BackgroundColor3": {
+                      "b": 1,
+                      "__type": "Color3",
+                      "g": 1,
+                      "r": 1
+                    },
+                    "Modal": true,
+                    "BorderColor3": {
+                      "b": 0,
+                      "__type": "Color3",
+                      "g": 0,
+                      "r": 0
+                    },
+                    "Text": "",
+                    "FontFace": {
+                      "family": "rbxasset://fonts/families/SourceSansPro.json",
+                      "__type": "Font",
+                      "style": 0,
+                      "weight": 400
+                    },
+                    "TextSize": 14,
+                    "TextColor3": {
+                      "b": 0,
+                      "__type": "Color3",
+                      "g": 0,
+                      "r": 0
+                    },
+                    "Font": {
+                      "__type": "EnumItem",
+                      "enumType": "Font",
+                      "name": "SourceSans"
+                    },
+                    "BackgroundTransparency": 1,
+                    "BorderColor": {
+                      "number": 1003,
+                      "__type": "BrickColor"
+                    },
+                    "TextColor": {
+                      "number": 1003,
+                      "__type": "BrickColor"
+                    },
+                    "BackgroundColor": {
+                      "number": 1001,
+                      "__type": "BrickColor"
+                    },
+                    "BorderSizePixel": 0,
+                    "Size": {
+                      "yScale": 0,
+                      "__type": "UDim2",
+                      "xOffset": 200,
+                      "xScale": 0,
+                      "yOffset": 50
+                    }
+                  }
+                },
+                {
+                  "name": "Grid",
+                  "className": "Frame",
+                  "guid": "144361",
+                  "children": [
+                    {
+                      "name": "BaseCell",
+                      "className": "TextButton",
+                      "guid": "2335690",
+                      "properties": {
+                        "Visible": false,
+                        "FontSize": {
+                          "__type": "EnumItem",
+                          "enumType": "FontSize",
+                          "name": "Size24"
+                        },
+                        "BorderMode": {
+                          "__type": "EnumItem",
+                          "enumType": "BorderMode",
+                          "name": "Inset"
+                        },
+                        "BorderColor3": {
+                          "b": 0,
+                          "__type": "Color3",
+                          "g": 0,
+                          "r": 1
+                        },
+                        "BackgroundColor3": {
+                          "b": 0.1568627506494522,
+                          "__type": "Color3",
+                          "g": 0.1568627506494522,
+                          "r": 0.1568627506494522
+                        },
+                        "TextSize": 20,
+                        "Font": {
+                          "__type": "EnumItem",
+                          "enumType": "Font",
+                          "name": "SourceSans"
+                        },
+                        "TextColor3": {
+                          "b": 0,
+                          "__type": "Color3",
+                          "g": 1,
+                          "r": 0
+                        },
+                        "BorderColor": {
+                          "number": 1004,
+                          "__type": "BrickColor"
+                        },
+                        "FontFace": {
+                          "family": "rbxasset://fonts/families/SourceSansPro.json",
+                          "__type": "Font",
+                          "style": 0,
+                          "weight": 400
+                        },
+                        "TextColor": {
+                          "number": 1020,
+                          "__type": "BrickColor"
+                        },
+                        "BackgroundColor": {
+                          "number": 26,
+                          "__type": "BrickColor"
+                        },
+                        "Size": {
+                          "yScale": 0,
+                          "__type": "UDim2",
+                          "xOffset": 200,
+                          "xScale": 0,
+                          "yOffset": 50
+                        }
+                      }
+                    },
+                    {
+                      "name": "UIGridLayout",
+                      "className": "UIGridLayout",
+                      "guid": "144362",
+                      "properties": {
+                        "SortOrder": {
+                          "__type": "EnumItem",
+                          "enumType": "SortOrder",
+                          "name": "LayoutOrder"
+                        },
+                        "CellPadding": {
+                          "yScale": 0,
+                          "__type": "UDim2",
+                          "xOffset": 0,
+                          "xScale": 0,
+                          "yOffset": 0
+                        },
+                        "CellSize": {
+                          "yScale": 0,
+                          "__type": "UDim2",
+                          "xOffset": 50,
+                          "xScale": 0,
+                          "yOffset": 50
+                        }
+                      }
+                    }
+                  ],
+                  "properties": {
+                    "AnchorPoint": {
+                      "y": 0.5,
+                      "__type": "Vector2",
+                      "x": 0.5
+                    },
+                    "Position": {
+                      "yScale": 0.5,
+                      "__type": "UDim2",
+                      "xOffset": 0,
+                      "xScale": 0.5,
+                      "yOffset": 0
+                    },
+                    "Size": {
+                      "yScale": 1,
+                      "__type": "UDim2",
+                      "xOffset": 0,
+                      "xScale": 1,
+                      "yOffset": 0
+                    },
+                    "BorderColor": {
+                      "number": 1003,
+                      "__type": "BrickColor"
+                    },
+                    "BorderColor3": {
+                      "b": 0,
+                      "__type": "Color3",
+                      "g": 0,
+                      "r": 0
+                    },
+                    "BackgroundColor": {
+                      "number": 1001,
+                      "__type": "BrickColor"
+                    },
+                    "BorderSizePixel": 0,
+                    "BackgroundColor3": {
+                      "b": 1,
+                      "__type": "Color3",
+                      "g": 1,
+                      "r": 1
+                    }
+                  }
+                },
+                {
+                  "name": "Items",
+                  "className": "Frame",
+                  "guid": "144363",
+                  "properties": {
+                    "BorderColor3": {
+                      "b": 0,
+                      "__type": "Color3",
+                      "g": 0,
+                      "r": 0
+                    },
+                    "Position": {
+                      "yScale": 0.5,
+                      "__type": "UDim2",
+                      "xOffset": 0,
+                      "xScale": 0.5,
+                      "yOffset": 0
+                    },
+                    "AnchorPoint": {
+                      "y": 0.5,
+                      "__type": "Vector2",
+                      "x": 0.5
+                    },
+                    "BackgroundColor": {
+                      "number": 1001,
+                      "__type": "BrickColor"
+                    },
+                    "BackgroundTransparency": 1,
+                    "BorderColor": {
+                      "number": 1003,
+                      "__type": "BrickColor"
+                    },
+                    "Size": {
+                      "yScale": 0,
+                      "__type": "UDim2",
+                      "xOffset": 100,
+                      "xScale": 0,
+                      "yOffset": 100
+                    },
+                    "ZIndex": 2,
+                    "BorderSizePixel": 0,
+                    "BackgroundColor3": {
+                      "b": 1,
+                      "__type": "Color3",
+                      "g": 1,
+                      "r": 1
+                    }
+                  }
+                },
+                {
+                  "name": "UICorner",
+                  "className": "UICorner",
+                  "guid": "144359",
+                  "properties": {
+                    "TopLeftRadius": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 15
+                    },
+                    "TopRightRadius": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 15
+                    },
+                    "BottomRightRadius": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 15
+                    },
+                    "CornerRadius": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 15
+                    },
+                    "BottomLeftRadius": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 15
+                    }
+                  }
+                },
+                {
+                  "name": "UIPadding",
+                  "className": "UIPadding",
+                  "guid": "144358",
+                  "properties": {
+                    "PaddingBottom": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 10
+                    },
+                    "PaddingTop": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 10
+                    },
+                    "PaddingLeft": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 10
+                    },
+                    "PaddingRight": {
+                      "scale": 0,
+                      "__type": "UDim",
+                      "offset": 10
+                    }
+                  }
+                }
+              ],
+              "properties": {
+                "Visible": false,
+                "Active": true,
+                "BorderColor3": {
+                  "b": 0,
+                  "__type": "Color3",
+                  "g": 0,
+                  "r": 0
+                },
+                "AnchorPoint": {
+                  "y": 0.5,
+                  "__type": "Vector2",
+                  "x": 0.5
+                },
+                "Position": {
+                  "yScale": 0.5,
+                  "__type": "UDim2",
+                  "xOffset": 0,
+                  "xScale": 0.5,
+                  "yOffset": 0
+                },
+                "BackgroundTransparency": 0.699999988079071,
+                "BorderColor": {
+                  "number": 1003,
+                  "__type": "BrickColor"
+                },
+                "BackgroundColor": {
+                  "number": 1003,
+                  "__type": "BrickColor"
+                },
+                "Size": {
+                  "yScale": 0.699999988079071,
+                  "__type": "UDim2",
+                  "xOffset": 0,
+                  "xScale": 0.699999988079071,
+                  "yOffset": 0
+                },
+                "BorderSizePixel": 0,
+                "BackgroundColor3": {
+                  "b": 0,
+                  "__type": "Color3",
+                  "g": 0,
+                  "r": 0
+                }
+              }
+            },
+            {
+              "name": "Main",
+              "className": "LocalScript",
+              "guid": "144364"
+            }
+          ],
+          "properties": {
+            "ZIndexBehavior": {
+              "__type": "EnumItem",
+              "enumType": "ZIndexBehavior",
+              "name": "Sibling"
+            }
+          }
+        }
+      ],
+      "properties": {
+        "ShowDevelopmentGui": true,
+        "ScreenOrientation": {
+          "__type": "EnumItem",
+          "enumType": "ScreenOrientation",
+          "name": "LandscapeSensor"
+        },
+        "Sandboxed": false,
+        "Archivable": true,
+        "ResetPlayerGuiOnSpawn": true,
+        "archivable": true
+      }
+    },
+    {
+      "name": "StarterPack",
+      "className": "StarterPack",
+      "guid": "144100",
+      "properties": {
+        "Sandboxed": false,
+        "Archivable": true,
+        "archivable": true
+      }
+    },
+    {
+      "name": "StarterPlayer",
+      "className": "StarterPlayer",
+      "guid": "144099",
+      "children": [
+        {
+          "name": "StarterCharacterScripts",
+          "className": "StarterCharacterScripts",
+          "guid": "144355",
+          "properties": {
+            "Sandboxed": false,
+            "Archivable": true,
+            "archivable": true
+          }
+        },
+        {
+          "name": "StarterPlayerScripts",
+          "className": "StarterPlayerScripts",
+          "guid": "144353",
+          "children": [
+            {
+              "name": "Main",
+              "className": "LocalScript",
+              "guid": "144354"
+            }
+          ],
+          "properties": {
+            "Sandboxed": false,
+            "Archivable": true,
+            "archivable": true
+          }
+        }
+      ],
+      "properties": {
+        "DevCameraOcclusionMode": {
+          "__type": "EnumItem",
+          "enumType": "DevCameraOcclusionMode",
+          "name": "Zoom"
+        },
+        "AutoJumpEnabled": true,
+        "CameraMinZoomDistance": 0.5,
+        "AllowCustomAnimations": true,
+        "UserEmotesEnabled": true,
+        "CharacterMaxSlopeAngle": 89,
+        "LuaCharacterController": {
+          "__type": "EnumItem",
+          "enumType": "CharacterControlMode",
+          "name": "Default"
+        },
+        "HealthDisplayDistance": 100,
+        "ClassicDeath": true,
+        "NameDisplayDistance": 100,
+        "CharacterJumpHeight": 7.199999809265137,
+        "DevComputerMovementMode": {
+          "__type": "EnumItem",
+          "enumType": "DevComputerMovementMode",
+          "name": "UserChoice"
+        },
+        "CharacterJumpPower": 50,
+        "CameraMode": {
+          "__type": "EnumItem",
+          "enumType": "CameraMode",
+          "name": "Classic"
+        },
+        "Sandboxed": false,
+        "LoadCharacterAppearance": true,
+        "EnableMouseLockOption": true,
+        "CharacterUseJumpPower": true,
+        "archivable": true,
+        "CharacterBreakJointsOnDeath": true,
+        "DevTouchMovementMode": {
+          "__type": "EnumItem",
+          "enumType": "DevTouchMovementMode",
+          "name": "UserChoice"
+        },
+        "Archivable": true,
+        "DevComputerCameraMovementMode": {
+          "__type": "EnumItem",
+          "enumType": "DevComputerCameraMovementMode",
+          "name": "UserChoice"
+        },
+        "CameraMaxZoomDistance": 400,
+        "DevTouchCameraMovementMode": {
+          "__type": "EnumItem",
+          "enumType": "DevTouchCameraMovementMode",
+          "name": "UserChoice"
+        },
+        "CharacterWalkSpeed": 16
+      }
+    },
+    {
+      "name": "Workspace",
+      "className": "Workspace",
+      "guid": "143078",
+      "children": [
+        {
+          "name": "Baseplate",
+          "className": "Part",
+          "guid": "144347",
+          "properties": {
+            "Color": {
+              "b": 0.3843137323856354,
+              "__type": "Color3",
+              "g": 0.3686274588108063,
+              "r": 0.3843137323856354
+            },
+            "CFrame": {
+              "components": [
+                0,
+                -10,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "__type": "CFrame"
+            },
+            "BrickColor": {
+              "number": 199,
+              "__type": "BrickColor"
+            },
+            "brickColor": {
+              "number": 199,
+              "__type": "BrickColor"
+            },
+            "Position": {
+              "y": -10,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "Locked": true,
+            "Size": {
+              "y": 20,
+              "__type": "Vector3",
+              "x": 512,
+              "z": 512
+            },
+            "Anchored": true,
+            "size": {
+              "y": 20,
+              "__type": "Vector3",
+              "x": 512,
+              "z": 512
+            }
+          }
+        },
+        {
+          "name": "Camera",
+          "className": "Camera",
+          "guid": "144346",
+          "properties": {
+            "MaxAxisFieldOfView": 124.74483489990234,
+            "CoordinateFrame": {
+              "components": [
+                -18.083595275878906,
+                14.180859565734863,
+                -20.749813079833984,
+                0.03123444877564907,
+                0.6173834204673767,
+                -0.7860375046730042,
+                1.0302755981683731e-8,
+                0.7864260077476501,
+                0.6176853775978088,
+                0.9995120167732239,
+                -0.019293196499347687,
+                0.024565044790506363
+              ],
+              "__type": "CFrame"
+            },
+            "Focus": {
+              "components": [
+                -7.142303466796875,
+                6.453988552093506,
+                -11.048140525817871,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "__type": "CFrame"
+            },
+            "CFrame": {
+              "components": [
+                -18.083595275878906,
+                14.180859565734863,
+                -20.749813079833984,
+                0.03123444877564907,
+                0.6173834204673767,
+                -0.7860375046730042,
+                1.0302755981683731e-8,
+                0.7864260077476501,
+                0.6176853775978088,
+                0.9995120167732239,
+                -0.019293196499347687,
+                0.024565044790506363
+              ],
+              "__type": "CFrame"
+            },
+            "focus": {
+              "components": [
+                -7.142303466796875,
+                6.453988552093506,
+                -11.048140525817871,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "__type": "CFrame"
+            },
+            "DiagonalFieldOfView": 152.84498596191406
+          }
+        },
+        {
+          "name": "Terrain",
+          "className": "Terrain",
+          "guid": "144348",
+          "properties": {
+            "RightParamB": 0.5,
+            "Velocity": {
+              "y": 0,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "RightSurface": {
+              "__type": "EnumItem",
+              "enumType": "SurfaceType",
+              "name": "Smooth"
+            },
+            "archivable": true,
+            "size": {
+              "y": 252,
+              "__type": "Vector3",
+              "x": 2044,
+              "z": 2044
+            },
+            "Friction": 0.5,
+            "FrontParamB": 0.5,
+            "BottomSurface": {
+              "__type": "EnumItem",
+              "enumType": "SurfaceType",
+              "name": "Inlet"
+            },
+            "CollisionGroup": "Default",
+            "BackSurfaceInput": {
+              "__type": "EnumItem",
+              "enumType": "InputType",
+              "name": "NoInput"
+            },
+            "AssemblyLinearVelocity": {
+              "y": 0,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "Elasticity": 0.30000001192092896,
+            "FrontParamA": -0.5,
+            "WaterWaveSize": 0.15000000596046448,
+            "TopSurface": {
+              "__type": "EnumItem",
+              "enumType": "SurfaceType",
+              "name": "Studs"
+            },
+            "RightParamA": -0.5,
+            "Color": {
+              "b": 0.6470588445663452,
+              "__type": "Color3",
+              "g": 0.6352941393852234,
+              "r": 0.6392157077789307
+            },
+            "Massless": false,
+            "CollisionGroupId": 0,
+            "RotVelocity": {
+              "y": 0,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "Locked": true,
+            "Material": {
+              "__type": "EnumItem",
+              "enumType": "Material",
+              "name": "Plastic"
+            },
+            "Size": {
+              "y": 252,
+              "__type": "Vector3",
+              "x": 2044,
+              "z": 2044
+            },
+            "BackSurface": {
+              "__type": "EnumItem",
+              "enumType": "SurfaceType",
+              "name": "Smooth"
+            },
+            "WaterReflectance": 1,
+            "Rotation": {
+              "y": 0,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "WaterTransparency": 0.30000001192092896,
+            "AudioCanCollide": true,
+            "LeftParamA": -0.5,
+            "CastShadow": true,
+            "PivotOffset": {
+              "components": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "__type": "CFrame"
+            },
+            "TopSurfaceInput": {
+              "__type": "EnumItem",
+              "enumType": "InputType",
+              "name": "NoInput"
+            },
+            "Anchored": true,
+            "FrontSurfaceInput": {
+              "__type": "EnumItem",
+              "enumType": "InputType",
+              "name": "NoInput"
+            },
+            "BottomParamB": 0.5,
+            "AssemblyAngularVelocity": {
+              "y": 0,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "BottomSurfaceInput": {
+              "__type": "EnumItem",
+              "enumType": "InputType",
+              "name": "NoInput"
+            },
+            "CanCollide": true,
+            "Sandboxed": false,
+            "EnableFluidForces": true,
+            "LeftSurface": {
+              "__type": "EnumItem",
+              "enumType": "SurfaceType",
+              "name": "Smooth"
+            },
+            "Transparency": 0,
+            "brickColor": {
+              "number": 194,
+              "__type": "BrickColor"
+            },
+            "WaterColor": {
+              "b": 0.36000001430511475,
+              "__type": "Color3",
+              "g": 0.33000001311302185,
+              "r": 0.05000000074505806
+            },
+            "Orientation": {
+              "y": 0,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "TopParamB": 0.5,
+            "TopParamA": -0.5,
+            "CanQuery": true,
+            "WaterWaveSpeed": 10,
+            "BottomParamA": -0.5,
+            "Archivable": true,
+            "FrontSurface": {
+              "__type": "EnumItem",
+              "enumType": "SurfaceType",
+              "name": "Smooth"
+            },
+            "BackParamA": -0.5,
+            "LeftParamB": 0.5,
+            "LocalTransparencyModifier": 0,
+            "CanTouch": true,
+            "CFrame": {
+              "components": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1
+              ],
+              "__type": "CFrame"
+            },
+            "BackParamB": 0.5,
+            "Position": {
+              "y": 0,
+              "__type": "Vector3",
+              "x": 0,
+              "z": 0
+            },
+            "BrickColor": {
+              "number": 194,
+              "__type": "BrickColor"
+            },
+            "Reflectance": 0,
+            "RightSurfaceInput": {
+              "__type": "EnumItem",
+              "enumType": "InputType",
+              "name": "NoInput"
+            },
+            "RootPriority": 0,
+            "LeftSurfaceInput": {
+              "__type": "EnumItem",
+              "enumType": "InputType",
+              "name": "NoInput"
+            },
+            "MaterialVariant": ""
+          }
+        }
+      ],
+      "properties": {
+        "FallHeightEnabled": true,
+        "Gravity": 196.1999969482422,
+        "Retargeting": {
+          "__type": "EnumItem",
+          "enumType": "AnimatorRetargetingMode",
+          "name": "Default"
+        },
+        "FallenPartsDestroyHeight": -500,
+        "CurrentCamera": {
+          "__type": "InstanceRef",
+          "path": [
+            "Workspace",
+            "Camera"
+          ],
+          "guid": "144346"
+        },
+        "WorldPivot": {
+          "components": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1
+          ],
+          "__type": "CFrame"
+        },
+        "archivable": true,
+        "DistributedGameTime": 0,
+        "Sandboxed": false,
+        "AllowThirdPartySales": false,
+        "AirTurbulenceIntensity": 0,
+        "InsertPoint": {
+          "y": 0,
+          "__type": "Vector3",
+          "x": 0,
+          "z": 0
+        },
+        "AirDensity": 0.0012000000569969416,
+        "ClientAnimatorThrottling": {
+          "__type": "EnumItem",
+          "enumType": "ClientAnimatorThrottlingMode",
+          "name": "Default"
+        },
+        "GlobalWind": {
+          "y": 0,
+          "__type": "Vector3",
+          "x": 0,
+          "z": 0
+        },
+        "Archivable": true,
+        "StreamingEnabled": false,
+        "ModelStreamingMode": {
+          "__type": "EnumItem",
+          "enumType": "ModelStreamingMode",
+          "name": "Default"
+        }
+      },
+      "attributes": {
+        "Rojo_Target_CurrentCamera": "4cdfa2215b6ec3280a66cdc3000003ac"
+      }
+    }
+  ],
+  "_azul": {
+    "packVersion": 1,
+    "packedAt": "2026-07-21T18:18:42.621Z",
+    "mode": "all"
+  }
+}
