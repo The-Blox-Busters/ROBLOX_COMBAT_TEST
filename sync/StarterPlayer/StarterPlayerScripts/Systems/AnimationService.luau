@@ -19,34 +19,30 @@ function AnimationService:LoadAnimations(config)
     end
 end
 
-function AnimationService:PickingWeaponPlay()
+function AnimationService:DefaultAnimations()
+    local pickingWeaponTrack = self.Animator:LoadAnimation(self.PickingWeapon)
+    local idleTrack = self.Animator:LoadAnimation(self.Idle)
+    local steadyTrack = self.Animator:LoadAnimation(self.Steady)
     
-
-    if self.PickingWeapon then
-        if self.Animator then
-            local pickingWeaponTrack = self.Animator:LoadAnimation(self.PickingWeapon)
-            pickingWeaponTrack:Play()
-        end
-    end
-end
-
-function AnimationService:IdlePlay()
-    
-    if self.Idle then
-        if self.Animator then
-            local idleTrack = self.Animator:LoadAnimation(self.Idle)
-            idleTrack:Play()
-        end
-    end
-end
-
-function AnimationService:SteadyPlay()
-    if self.Steady then
-        if self.Animator then
-            local steadyTrack = self.Animator:LoadAnimation(self.Steady)
+    pickingWeaponTrack:Play()
+    local movement = game.Players.LocalPlayer.Character.Humanoid.MoveDirection.Magnitude > 0
+    if movement then
+        pickingWeaponTrack.Stopped:Once(function()
             steadyTrack:Play()
-        end
+        end)
+    else
+        pickingWeaponTrack.Stopped:Once(function()
+            idleTrack:Play()
+        end)
     end
+end
+
+function AnimationService:Shooting()
+    local shootTrack = self.Animator:LoadAnimation(self.Shoot)
+    print("Self.shoot: " .. self.Shoot:GetFullName())
+    print("Self.Animator: " .. self.Animator:GetFullName())
+    
+    shootTrack:Play()
 end
 
 return AnimationService
